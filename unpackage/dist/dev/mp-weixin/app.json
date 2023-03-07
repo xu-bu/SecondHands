@@ -56,5 +56,9 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "van-uploader": "/wxcomponents/vant/uploader/index",
+    "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
+    "van-button": "/wxcomponents/vant/button/index"
+  }
 }

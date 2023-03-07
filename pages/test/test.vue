@@ -18,7 +18,9 @@
 		},
 		methods: {
 			submit(){
-				console.log("test")
+				uni.showModal({
+					content:"submit successfully"
+				})
 				const db = uniCloud.database();
 				db.collection("test").add(this.item).then(e=>{
 					console.log(e);

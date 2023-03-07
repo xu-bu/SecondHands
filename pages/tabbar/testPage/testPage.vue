@@ -1,9 +1,14 @@
 <template>
 	<view>
-		<uni-easyinput  v-model="item.name" placeholder="name" />
-		<uni-easyinput  v-model="item.phone" placeholder="phone" />
-		<button @click="submit">提交</button>
-		<button @click="callco">test</button>
+		<!-- <button @click="callco">cloud test</button> -->
+		<!-- <van-button>test</van-button> -->
+		<!-- <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" /> -->
+		<van-submit-bar
+		  custom-class="root-class"
+		  :price="3050"
+		  button-text="立即上架"
+		  @submit="onSubmit"
+		/>
 	</view>
 </template>
 
@@ -24,6 +29,12 @@
 				let res=await co1.test("test from client")
 				uni.showModal({
 					content:JSON.stringify(res.data),
+					showCancel:false 
+				})
+			},
+			onSubmit(){
+				uni.showModal({
+					content:"test",
 					showCancel:false 
 				})
 			}

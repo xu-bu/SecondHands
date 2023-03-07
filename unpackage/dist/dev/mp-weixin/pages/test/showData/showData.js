@@ -148,7 +148,7 @@ var render = function () {
         _temp2 = _temp.eventParams || _temp["event-params"],
         item = _temp2.item
       var _temp, _temp2
-      return _vm.rmItem(item.id)
+      return _vm.rmItem(item._id)
     }
   }
   _vm.$mp.data = Object.assign(

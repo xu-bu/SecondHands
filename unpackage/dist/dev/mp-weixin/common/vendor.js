@@ -1524,7 +1524,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8878,7 +8878,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8899,14 +8899,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9002,7 +9002,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"vue2","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9873,7 +9873,9 @@ var k = m({
         "127.0.0.1",
         "172.16.3.45",
         "169.254.105.150",
-        "192.168.1.1"
+        "192.168.1.1",
+        "172.16.7.136",
+        "172.30.112.1"
     ],
     "debugPort": 9000,
     "initialLaunchType": "remote",
@@ -16915,7 +16917,12 @@ var _default = {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "usingComponents": {
+      "van-uploader": "/wxcomponents/vant/uploader/index",
+      "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
+      "van-button": "/wxcomponents/vant/button/index"
+    }
   },
   "tabBar": {
     "borderStyle": "black",
@@ -17180,7 +17187,19 @@ function normalizeComponent (
 /* 116 */,
 /* 117 */,
 /* 118 */,
-/* 119 */
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */
 /*!************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/index.js ***!
   \************************************************************************/
@@ -17189,16 +17208,16 @@ function normalizeComponent (
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 120);
-var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 120, 1);
-/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 121);
-var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 121, 1);
-/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 122);
-var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 122, 1);
-/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 123);
-var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 123, 1);
-/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 124);
-var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 124, 1);
+/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 132);
+var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 132, 1);
+/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 133);
+var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 133, 1);
+/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 134);
+var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 134, 1);
+/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 135);
+var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 135, 1);
+/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 136);
+var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 136, 1);
 
 
 
@@ -17214,7 +17233,7 @@ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpac
 
 
 /***/ }),
-/* 120 */
+/* 132 */
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/en.json ***!
   \***********************************************************************/
@@ -17224,7 +17243,7 @@ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpac
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"uniCloud.component.update.success\":\"Success\",\"uniCloud.component.remove.showModal.title\":\"Tips\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 121 */
+/* 133 */
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/es.json ***!
   \***********************************************************************/
@@ -17234,7 +17253,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"u
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 122 */
+/* 134 */
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/fr.json ***!
   \***********************************************************************/
@@ -17244,7 +17263,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 123 */
+/* 135 */
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hans.json ***!
   \****************************************************************************/
@@ -17254,7 +17273,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
 
 /***/ }),
-/* 124 */
+/* 136 */
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hant.json ***!
   \****************************************************************************/
@@ -17264,18 +17283,6 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否刪除數據\"}");
 
 /***/ }),
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
 /* 137 */,
 /* 138 */,
 /* 139 */,
@@ -17290,7 +17297,26 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 /* 148 */,
 /* 149 */,
 /* 150 */,
-/* 151 */
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */
 /*!**********************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \**********************************************************************************************************/

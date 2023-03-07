@@ -157,7 +157,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud) {
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -182,7 +182,9 @@ var _default = {
   },
   methods: {
     submit: function submit() {
-      console.log("test");
+      uni.showModal({
+        content: "submit successfully"
+      });
       var db = uniCloud.database();
       db.collection("test").add(this.item).then(function (e) {
         console.log(e);
@@ -191,7 +193,7 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"]))
 
 /***/ })
 

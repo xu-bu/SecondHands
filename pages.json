@@ -34,31 +34,37 @@
 		{
 			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
 			"style": {}
+		}, {
+			"path": "pages/test/test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/test/showData/showData",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
-	    ,{
-            "path" : "pages/test/test",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/test/showData/showData",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"usingComponents": {
+			"van-uploader":"/wxcomponents/vant/uploader/index",
+			"van-submit-bar": "/wxcomponents/vant/submit-bar/index",
+			"van-button": "/wxcomponents/vant/button/index"
+		}
+		// "easycom": {
+		//   "autoscan": true,
+		//   "custom": {
+		//     "van-(.*)": "@/wxcomponents/vant/$1/index.vue" // 匹配components目录内的vue文件
+		//   }
 	},
 	"tabBar": {
 		"borderStyle": "black",
