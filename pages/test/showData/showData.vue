@@ -1,0 +1,31 @@
+<template>
+	<view>
+		<unicloud-db ref="udb" v-slot:default="{data, loading, error, options}" collection="test">
+			<view v-if="error">{{error.message}}</view>
+			<view v-else>
+				<uni-list>
+					<uni-list-item v-for="item in data" @longpress.native="rmItem(item.id)"></uni-list-item>
+				</uni-list>
+			</view>
+		</unicloud-db>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			rmItem(id){
+				this.$refs.udb.remove(id)
+			}
+		}
+	}
+</script>
+
+<style>
+
+</style>
