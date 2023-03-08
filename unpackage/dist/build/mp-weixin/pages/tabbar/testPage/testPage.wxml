@@ -1,0 +1,1 @@
+<view><van-submit-bar vue-id="7f4eb6e2-1" custom-class="root-class" price="{{3050}}" button-text="立即上架" data-event-opts="{{[['^submit',[['onSubmit']]]]}}" data-com-type="wx" bind:submit="__e" bind:__l="__l"></van-submit-bar></view>

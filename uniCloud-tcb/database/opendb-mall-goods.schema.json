@@ -1,13 +1,11 @@
 {
 	"bsonType": "object",
-	"required": ["goods_sn", "name", "remain_count", "month_sell_count", "total_sell_count", "comment_count", "is_real",
-		"is_on_sale", "is_alone_sale", "is_best", "is_new", "is_hot"
-	],
+	"required": ["name"],
 	"permission": {
-		"read": "doc.is_on_sale == true",
-		"create": false,
-		"update": false,
-		"delete": false
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
 	},
 	"properties": {
 		"_id": {

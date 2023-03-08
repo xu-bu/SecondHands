@@ -17,13 +17,13 @@
 			}
 		},
 		methods: {
-			submit(){
+			async callco() {
+				console.log("test")
+				const co1 = uniCloud.importObject("co")
+				let res = await co1.test("test from client")
 				uni.showModal({
-					content:"submit successfully"
-				})
-				const db = uniCloud.database();
-				db.collection("test").add(this.item).then(e=>{
-					console.log(e);
+					content: JSON.stringify(res.data),
+					showCancel: false
 				})
 			}
 		}

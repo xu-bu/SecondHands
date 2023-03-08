@@ -11,7 +11,7 @@
 		"_id": {
 			"description": "ID，系统自动生成"
 		},
-		"name":{},
-		"phone":{}
+		"name": {},
+		"phone": {}
 	}
 }

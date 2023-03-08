@@ -1,14 +1,6 @@
 <template>
 	<view>
-		<!-- <button @click="callco">cloud test</button> -->
-		<!-- <van-button>test</van-button> -->
-		<!-- <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" /> -->
-		<van-submit-bar
-		  custom-class="root-class"
-		  :price="3050"
-		  button-text="立即上架"
-		  @submit="onSubmit"
-		/>
+		<button @click="test">test</button>
 	</view>
 </template>
 
@@ -16,32 +8,39 @@
 	export default {
 		data() {
 			return {
-				item:{
-					"name":"",
-					"phone":""
-				}
+
 			}
 		},
 		methods: {
-			async callco(){
-				console.log("test")
-				const co1=uniCloud.importObject("co")
-				let res=await co1.test("test from client")
-				uni.showModal({
-					content:JSON.stringify(res.data),
-					showCancel:false 
+			test(){
+				const db = uniCloud.database();
+				db.collection("opendb-mall-goods").add({
+					name:"test",
+					goods_thumb:"https://7463-tcb-k67cp52wpnffm7w-8cbfbd832520-1317117948.tcb.qcloud.la/1678299353369_0.png"
 				})
-			},
-			onSubmit(){
-				uni.showModal({
-					content:"test",
-					showCancel:false 
-				})
+				console.log("success")
 			}
 		}
 	}
 </script>
 
-<style>
+<style lang="scss">
+	.example-body {
+		padding: 10px;
+		padding-top: 0;
+	}
 
+	.custom-image-box {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.text {
+		font-size: 14px;
+		color: #333;
+	}
 </style>

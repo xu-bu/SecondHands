@@ -2,6 +2,7 @@
   "pages": [
     "pages/tabbar/goods/goods",
     "pages/tabbar/testPage/testPage",
+    "pages/tabbar/publish/publish",
     "pages/tabbar/tabbar-3/tabbar-3",
     "pages/tabbar/tabbar-4/tabbar-4",
     "pages/tabbar/tabbar-5/tabbar-5",
@@ -37,7 +38,7 @@
         "text": "商品"
       },
       {
-        "pagePath": "pages/tabbar/tabbar-3/tabbar-3",
+        "pagePath": "pages/tabbar/publish/publish",
         "iconPath": "static/img/tabbar/add.png",
         "selectedIconPath": "static/img/tabbar/addactive.png",
         "text": "发布"
@@ -59,6 +60,7 @@
   "usingComponents": {
     "van-uploader": "/wxcomponents/vant/uploader/index",
     "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
-    "van-button": "/wxcomponents/vant/button/index"
+    "van-button": "/wxcomponents/vant/button/index",
+    "van-field": "/wxcomponents/vant/field/index"
   }
 }
