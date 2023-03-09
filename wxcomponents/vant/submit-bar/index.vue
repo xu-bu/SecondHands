@@ -13,7 +13,7 @@
   <view :class="'bar-class '+(utils.bem('submit-bar__bar', { safe: safeAreaInsetBottom }))">
     <slot></slot>
     <view v-if="hasPrice" class="van-submit-bar__text">
-      <text>{{ label || '合计：' }}</text>
+      <text>{{ label || '' }}</text>
       <text class="van-submit-bar__price price-class">
         <text class="van-submit-bar__currency">{{ currency }} </text>
         <text class="van-submit-bar__price-integer">{{ integerStr }}</text><text>{{decimalStr}}</text>

@@ -1,6 +1,13 @@
 <template>
 	<view>
-		<button @click="test">test</button>
+		<unicloud-db ref="udb" v-slot:default="{data, loading, error, options}" collection="test">
+			<view v-if="error">{{error.message}}</view>
+			<view v-else>
+				<uni-list>
+					<uni-list-item v-for="item in data" @longpress.native="rmItem(item._id)" :key="item._id" :title="item.name" :note="item.phone"   link></uni-list-item>
+				</uni-list>
+			</view>
+		</unicloud-db>
 	</view>
 </template>
 
@@ -8,39 +15,29 @@
 	export default {
 		data() {
 			return {
-
+				
 			}
 		},
 		methods: {
-			test(){
-				const db = uniCloud.database();
-				db.collection("opendb-mall-goods").add({
-					name:"test",
-					goods_thumb:"https://7463-tcb-k67cp52wpnffm7w-8cbfbd832520-1317117948.tcb.qcloud.la/1678299353369_0.png"
+			rmItem(id){
+				this.$refs.udb.remove(id)
+			},
+			async callco() {
+				console.log("test")
+				const co1 = uniCloud.importObject("co")
+				let res = await co1.test("test from client")
+				uni.showModal({
+					content: JSON.stringify(res.data),
+					showCancel: false
 				})
-				console.log("success")
+			},
+			onLoad(){
+				this.callco()
 			}
 		}
 	}
 </script>
 
-<style lang="scss">
-	.example-body {
-		padding: 10px;
-		padding-top: 0;
-	}
+<style>
 
-	.custom-image-box {
-		/* #ifndef APP-NVUE */
-		display: flex;
-		/* #endif */
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.text {
-		font-size: 14px;
-		color: #333;
-	}
 </style>

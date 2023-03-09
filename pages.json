@@ -4,7 +4,8 @@
 		{
 			"path": "pages/tabbar/goods/goods",
 			"style": {
-				"navigationBarTitleText": "page.json修改导航栏"
+				"navigationBarTitleText": "page.json修改导航栏",
+				"enablePullDownRefresh":true
 			}
 		},
 		{
@@ -53,12 +54,22 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh":true,
 		"usingComponents": {
 			"van-uploader":"/wxcomponents/vant/uploader/index",
 			"van-submit-bar": "/wxcomponents/vant/submit-bar/index",

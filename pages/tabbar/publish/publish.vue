@@ -3,10 +3,10 @@
 		<van-cell-group>
 			<uni-section title="物品名称" type="line">
 			</uni-section>
-			<van-field :value="title" label="名称" placeholder="请输入物品名称" :clearable="true" />
+			<van-field label="名称" placeholder="请输入物品名称" @input="onTitle" />
 			<uni-section title="物品价格" type="line">
 			</uni-section>
-			<van-field type="digit" label="价格(rmb)" placeholder="请输入价格" @input="onChange" />
+			<van-field type="digit" label="价格(rmb)" placeholder="请输入价格" @input="onPrice" />
 			<uni-section title="物品描述" type="line">
 			</uni-section>
 			<!-- 默认为140，所以需要设置为无限大 -->
@@ -24,7 +24,10 @@
 		<text>\n</text>
 		<text>\n</text>
 		<van-cell-group>
-			<van-submit-bar custom-class="root-class" :price="price*100" button-text="立即上架" @submit="onSubmit" />
+			<van-submit-bar custom-class="root-class" :price="price*100" button-text="立即上架" @submit="onSubmit">
+				<!-- <van-tag type="primary">请等待图片上传完成后再离开哟</van-tag> -->
+				<div slot="tip">请等待图片上传完成后再离开哟</div>
+			</van-submit-bar>
 		</van-cell-group>
 	</view>
 
@@ -51,26 +54,93 @@
 					content: getApp().globalData.baseURL
 				})
 			},
-			onShow() {},
-			onChange(event) {
+			onShow: function() {
+				const pages = getCurrentPages()
+				const perpage = pages[pages.length - 1]
+				perpage.onLoad()
+			},
+			onTitle(e) {
+				this.title = e.detail
+				console.log(this.title)
+			},
+			onPrice(event) {
 				this.price = parseFloat(event.detail)
 			},
-			async onSubmit() {
-				console.log(this.content)
+			onTest() {
 				console.log(this.title)
-				console.log(this.price)
-				await this.$refs.files.upload()
-				uni.redirectTo({
-					url: "/pages/tabbar/goods/goods"
-				})
 			},
+			backToIndex() {
+				uni.showModal({
+					title: '',
+					content: '网络似乎不太好，上传失败了>_<',
+					showCancel: false,
+					success: function(res) {
+						if (res.confirm) {
+							uni.switchTab({
+								url: "/pages/tabbar/goods/goods",
+								success: (res) => {
+									let page = getCurrentPages().pop();
+									if (page == undefined || page == null) return;
+									page.onLoad();
+								}
+							})
+						}
+					},
+
+				});
+			},
+			async onSubmit() {
+				// console.log(this.content)
+				// console.log(this.title)
+				// console.log(this.price)
+				try {
+					await this.$refs.files.upload()
+				} catch (e) {
+					this.backToIndex()
+				}
+
+			},
+			// if publish successfully, update database
 			success(e) {
+				let url = []
 				uniCloud.getTempFileURL({
 						fileList: e.tempFilePaths
 					})
 					.then(res => {
-						console.log(res)
+						res.fileList.forEach(function(obj) {
+							url.push(obj.download_url)
+						})
+						const db = uniCloud.database();
+						console.log(url[0])
+						try {
+							db.collection("opendb-mall-goods").add({
+								"name": this.title,
+								goods_desc: this.content,
+								goods_price: this.price,
+								goods_banner_imgs: url,
+								goods_thumb: url[0]
+							})
+						} catch (e) {
+							this.backToIndex()
+							console.log(e)
+						}
 					});
+
+				uni.showModal({
+					title: '上架物品成功！',
+					content: '上架物品成功！',
+					showCancel: false,
+					success: res => {
+						uni.switchTab({
+							url: "/pages/tabbar/goods/goods",
+							success: (res) => {
+								let page = getCurrentPages().pop();
+								if (page == undefined || page == null) return;
+								page.onLoad();
+							}
+						})
+					},
+				});
 			}
 		}
 

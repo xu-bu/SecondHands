@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "page.json修改导航栏",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "goods-unicloud-db-default": "/pages/tabbar/goods/goods-unicloud-db-default",
     "uni-section": "/components/uni-section/uni-section",

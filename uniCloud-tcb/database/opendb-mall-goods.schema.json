@@ -2,7 +2,7 @@
 	"bsonType": "object",
 	"required": ["name"],
 	"permission": {
-		"read": true,
+		"read": "auth.uid == null",
 		"create": true,
 		"update": true,
 		"delete": true
@@ -40,6 +40,12 @@
 			"title": "详细描述",
 			"trim": "both"
 		},
+		"goods_price": {
+			"bsonType": "double",
+			"description": "商品价格",
+			"title": "商品价格",
+			"trim": "both"
+		},
 		"goods_thumb": {
 			"bsonType": "string",
 			"description": "商品缩略图，用于在列表或搜索结果中预览显示",
@@ -49,7 +55,7 @@
 		},
 		"goods_banner_imgs": {
 			"bsonType": "array",
-			"description": "商品详情页的banner图地址"
+			"description": "商品详情页的图片地址"
 		},
 		"remain_count": {
 			"bsonType": "int",
@@ -114,7 +120,7 @@
 			"description": "商家备注，仅商家可见",
 			"trim": "both",
 			"permission": {
-				"read": false
+				"read": "auth.uid == null"
 			}
 		}
 	},
