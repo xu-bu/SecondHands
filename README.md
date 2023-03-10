@@ -11,6 +11,9 @@
 
 ## 页面展示：
 商品页面：
+
 ![goods](https://github.com/xu-bu/vue2/blob/main/readmeIMG/goods.png)
+
 发布页面:
+
 ![publish](https://github.com/xu-bu/vue2/blob/main/readmeIMG/publish.png)
