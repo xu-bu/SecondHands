@@ -25,11 +25,16 @@
 /* 透明度 */
 /* 文章场景相关 */
 swiper {
+  padding: 10px;
   height: 750rpx;
 }
 swiper image {
   width: 100%;
   height: 100%;
+}
+.goods_name {
+  padding: 10px;
+  font-size: 20px;
 }
 .goods_info_box {
   padding: 10px;
@@ -37,13 +42,12 @@ swiper image {
 }
 .goods_info_box .price {
   color: #C00000;
-  font-size: 18px;
+  font-size: 25px;
   margin: 10px 0;
 }
 .goods_info_box .goods_name {
-  padding: 10px;
-  padding-right: 0;
-  font-size: 13px;
+  padding: 50px;
+  font-size: 16px;
 }
 .goods_info_box .goods_info_body {
   display: flex;

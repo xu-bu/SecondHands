@@ -50,6 +50,7 @@
 					this.goodsinfo = res.result.data[0]
 				})
 			},
+			// swiper preview
 			preview(i) {
 				uni.previewImage({
 					current: i,
@@ -62,6 +63,7 @@
 
 <style lang="scss">
 	swiper {
+		padding: 10px;
 		height: 750rpx;
 
 		image {
@@ -69,6 +71,13 @@
 			height: 100%;
 		}
 	}
+	
+	.goods_name {
+		padding: 10px;
+		// padding-right: 50px;
+		font-size: 20px;
+	}
+	
 
 	.goods_info_box {
 		// 左侧间距10px,右侧没有间距
@@ -77,15 +86,15 @@
 
 		.price {
 			color: #C00000;
-			font-size: 18px;
+			font-size: 25px;
 			// 上下间距10px,左右间距0
 			margin: 10px 0;
 
 		}
 		.goods_name {
-			padding: 10px;
-			padding-right: 0;
-			font-size: 13px;
+			padding: 50px;
+			// padding-right: 50px;
+			font-size: 16px;
 		}
 
 		.goods_info_body {

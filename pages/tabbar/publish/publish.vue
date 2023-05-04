@@ -108,7 +108,11 @@
 					})
 					.then(res => {
 						res.fileList.forEach(function(obj) {
-							url.push(obj.download_url)
+							console.log(obj.fileID)
+							// if use tencent cloud
+							// url.push(obj.download_url)
+							//if use ali cloud
+							url.push(obj.fileID)
 						})
 						const db = uniCloud.database();
 						console.log(url[0])

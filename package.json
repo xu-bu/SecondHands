@@ -77,6 +77,8 @@
 		}
 	},
 	"dependencies": {
+		"mobx-miniprogram": "^4.13.2",
+		"mobx-miniprogram-bindings": "^1.2.1",
 		"vant": "^2.12.54"
 	},
 	"devDependencies": {

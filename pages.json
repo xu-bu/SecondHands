@@ -4,7 +4,7 @@
 		{
 			"path": "pages/tabbar/goods/goods",
 			"style": {
-				"navigationBarTitleText": "page.json修改导航栏",
+				// "navigationBarTitleText": "page.json修改导航栏",
 				"enablePullDownRefresh":true
 			}
 		},
@@ -17,15 +17,7 @@
 			"style": {}
 		},
 		{
-			"path": "pages/tabbar/tabbar-3/tabbar-3",
-			"style": {}
-		},
-		{
 			"path": "pages/tabbar/tabbar-4/tabbar-4",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar/tabbar-5/tabbar-5",
 			"style": {}
 		},
 		{
@@ -63,6 +55,24 @@
             }
             
         }
+        ,{
+            "path" : "pages/tabbar/tabbar-3/tabbar-3",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/tabbar/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -87,18 +97,20 @@
 		"backgroundColor": "#333",
 		"color": "#8F8F94",
 		"selectedColor": "#f33e54",
-		"list": [{
-				"pagePath": "pages/tabbar/testPage/testPage",
-				"iconPath": "static/img/tabbar/home.png",
-				"selectedIconPath": "static/img/tabbar/homeactive.png",
-				"text": "测试"
-			},
+		"list": [
 			{
 				"pagePath": "pages/tabbar/goods/goods",
+				"iconPath": "static/img/tabbar/home.png",
+				"selectedIconPath": "static/img/tabbar/homeactive.png",
+				
+				"text": "商品"
+			},{
+				"pagePath": "pages/tabbar/testPage/testPage",
 				"iconPath": "static/img/tabbar/guanzhu.png",
 				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
-				"text": "商品"
+				"text": "测试"
 			},
+			
 			//#ifdef MP-WEIXIN
 			{
 				"pagePath": "pages/tabbar/publish/publish",
@@ -107,13 +119,7 @@
 				"text": "发布"
 			},
 			//#endif
-			//#ifndef MP-WEIXIN
-			{
-				"pagePath": "pages/tabbar/tabbar-3/tabbar-3",
-				"iconPath": "static/img/tabbar/add.png",
-				"selectedIconPath": "static/img/tabbar/addactive.png"
-			},
-			//#endif
+			
 			{
 				"pagePath": "pages/tabbar/tabbar-4/tabbar-4",
 				"iconPath": "static/img/tabbar/news.png",
@@ -121,10 +127,10 @@
 				"text": "消息"
 			},
 			{
-				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+				"pagePath": "pages/tabbar/my/my",
 				"iconPath": "static/img/tabbar/me.png",
 				"selectedIconPath": "static/img/tabbar/meactive.png",
-				"text": "我"
+				"text": "我的"
 			}
 		]
 	}

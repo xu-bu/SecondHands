@@ -1,5 +1,5 @@
 {
-    "name" : "vue2",
+    "name" : "ch1nl33ds",
     "appid" : "__UNI__D30BB6C",
     "description" : "",
     "versionName" : "1.0.0",
@@ -74,7 +74,7 @@
     },
     "quickapp" : {},
     "mp-weixin" : {
-        "appid" : "wx6323c819037481d7",
+        "appid" : "wx983fb58e4689ec79",
         "setting" : {
             "urlCheck" : true
         },
