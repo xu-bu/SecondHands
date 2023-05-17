@@ -10,7 +10,12 @@
 			return {
 				
 			};
-		}
+		},
+		onLoad() {
+			uni.navigateTo({
+				url: "/uni_modules/uni-id-pages/pages/login/login-withpwd"
+			})
+		},
 	}
 </script>
 

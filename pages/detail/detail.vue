@@ -69,6 +69,8 @@
 		image {
 			width: 100%;
 			height: 100%;
+			// add rounded angle
+			border-radius: 10px;
 		}
 	}
 	
