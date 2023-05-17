@@ -1,5 +1,3 @@
-
-
 # 基于vue2的二手交易平台/Second-hands trading platform based on vue2
 
 ## 上线/Publish：
