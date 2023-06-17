@@ -4,6 +4,7 @@
 			<uni-section title="物品名称" type="line">
 			</uni-section>
 			<van-field label="名称" placeholder="请输入物品名称" @input="onTitle" />
+			<van-field label="联系微信" placeholder="请输入您的微信号" @input="onContact" />
 			<uni-section title="物品价格" type="line">
 			</uni-section>
 			<van-field type="digit" label="价格(rmb)" placeholder="请输入价格" @input="onPrice" />
@@ -40,6 +41,7 @@
 				title: "",
 				price: 0,
 				content: "",
+				contact:"",
 				disable: true,
 				fileList: [],
 				postId: "",
@@ -61,10 +63,12 @@
 			},
 			onTitle(e) {
 				this.title = e.detail
-				console.log(this.title)
 			},
 			onPrice(event) {
 				this.price = parseFloat(event.detail)
+			},
+			onContact(event) {
+				this.contact = event.detail
 			},
 			onTest() {
 				console.log(this.title)

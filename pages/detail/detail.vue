@@ -17,9 +17,10 @@
 			<view class="price">
 				￥{{goodsinfo.goods_price}}
 			</view>
-			<!-- 商品主体区域 -->
-			<view class="goods_info_body">
-
+			<!-- 联系信息区域 -->
+			<view class="contact">联系微信号：{{goodsinfo.goods_price}}
+			<!-- <button @click="copy">复制</button> -->
+			<van-button @click="copy" type="primary" size="mini" color="linear-gradient(to right, #4bb0ff, #6149f6)">复制</van-button>
 			</view>
 			<!-- 商品描述 -->
 			<view class="goods_description">
@@ -33,15 +34,15 @@
 	export default {
 		data() {
 			return {
-				goodsinfo: {}
+				val:"test",
+				goodsinfo:""
 			}
 		},
 		methods: {
 			onLoad(option) {
 				this.getGoodsInfo(option.id)
 			},
-			test() {
-				console.log(this.goodsinfo.name)
+			copy() {
 			},
 
 			async getGoodsInfo(id) {
@@ -63,7 +64,7 @@
 
 <style lang="scss">
 	swiper {
-		padding: 10px;
+		padding: 20px;
 		height: 750rpx;
 
 		image {
@@ -73,17 +74,17 @@
 			border-radius: 10px;
 		}
 	}
-	
+
 	.goods_name {
-		padding: 10px;
+		padding: 20px;
 		// padding-right: 50px;
 		font-size: 20px;
 	}
-	
+
 
 	.goods_info_box {
 		// 左侧间距10px,右侧没有间距
-		padding: 10px;
+		padding: 20px;
 		padding-right: 0;
 
 		.price {
@@ -93,17 +94,18 @@
 			margin: 10px 0;
 
 		}
+
 		.goods_name {
 			padding: 50px;
 			// padding-right: 50px;
 			font-size: 16px;
 		}
 
-		.goods_info_body {
+		.contact {
 			display: flex;
-			justify-content: space-between;
-			
+			align-items: center;
 		}
+
 		.goods_description {}
 	}
 </style>

@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "goods-unicloud-db-default": "/pages/tabbar/goods/goods-unicloud-db-default",
+    "search-bar": "/components/searchBar/searchBar",
     "uni-section": "/components/uni-section/uni-section",
     "unicloud-db": "/node-modules/@dcloudio/uni-cli-shared/components/unicloud-db",
     "uni-list": "/uni_modules/uni-list/components/uni-list/uni-list",
