@@ -102,22 +102,22 @@ var components
 try {
   components = {
     searchBar: function () {
-      return __webpack_require__.e(/*! import() | components/searchBar/searchBar */ "components/searchBar/searchBar").then(__webpack_require__.bind(null, /*! @/components/searchBar/searchBar.vue */ 272))
+      return __webpack_require__.e(/*! import() | components/searchBar/searchBar */ "components/searchBar/searchBar").then(__webpack_require__.bind(null, /*! @/components/searchBar/searchBar.vue */ 264))
     },
     uniSection: function () {
-      return __webpack_require__.e(/*! import() | components/uni-section/uni-section */ "components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/components/uni-section/uni-section.vue */ 279))
+      return __webpack_require__.e(/*! import() | components/uni-section/uni-section */ "components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/components/uni-section/uni-section.vue */ 271))
     },
     unicloudDb: function () {
-      return Promise.all(/*! import() | node-modules/@dcloudio/uni-cli-shared/components/unicloud-db */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-cli-shared/components/unicloud-db")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-cli-shared/components/unicloud-db.vue */ 286))
+      return Promise.all(/*! import() | node-modules/@dcloudio/uni-cli-shared/components/unicloud-db */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-cli-shared/components/unicloud-db")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-cli-shared/components/unicloud-db.vue */ 278))
     },
     uniList: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 297))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 289))
     },
     uniListItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 304))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 296))
     },
     uniLoadMore: function () {
-      return Promise.all(/*! import() | uni_modules/uni-load-more/components/uni-load-more/uni-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-load-more/components/uni-load-more/uni-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-load-more/components/uni-load-more/uni-load-more.vue */ 311))
+      return Promise.all(/*! import() | uni_modules/uni-load-more/components/uni-load-more/uni-load-more */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-load-more/components/uni-load-more/uni-load-more")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-load-more/components/uni-load-more/uni-load-more.vue */ 303))
     },
   }
 } catch (e) {
@@ -252,7 +252,6 @@ exports.default = void 0;
 //
 //
 //
-//
 var _default = {
   components: {},
   data: function data() {
@@ -273,15 +272,19 @@ var _default = {
 
   computed: {
     where: function where() {
+      // i忽略大小写
       return "".concat(new RegExp(this.keyWord, 'i'), ".test(name)"); // 使用计算属性得到完整where
     }
   },
-  onLoad: function onLoad(options) {
-    // // 获取搜索页面传来的key word
-    // this.keyWord=options.keyWord
-    // console.log(options)
-    this.keyWord = "名称";
+  onLoad: function onLoad(option) {
+    var _this = this;
     var db = uniCloud.database();
+    if (option) {
+      console.log(option);
+      this.timer = setTimeout(function () {
+        _this.keyWord = option.keyWord;
+      }, 500);
+    }
     function refreshToken(_ref) {
       var token = _ref.token,
         tokenExpired = _ref.tokenExpired;
@@ -291,7 +294,6 @@ var _default = {
     // 绑定刷新token事件
     db.on('refreshToken', refreshToken);
   },
-  onShow: function onShow() {},
   methods: {
     /**
      * 切换商品列表布局方向
@@ -310,22 +312,25 @@ var _default = {
       });
     },
     test: function test() {
-      this.keyWord = "名称";
+      console.log("goods test");
+      uni.navigateTo({
+        url: "/pages/goods/goods"
+      });
     }
   },
   /**
    * 下拉刷新回调函数
    */
   onPullDownRefresh: function onPullDownRefresh() {
-    var _this = this;
+    var _this2 = this;
     this.formData.status = 'more';
     this.$refs.udb.loadData({
       clear: true
     }, function () {
-      _this.tipShow = true;
-      clearTimeout(_this.timer);
-      _this.timer = setTimeout(function () {
-        _this.tipShow = false;
+      _this2.tipShow = true;
+      clearTimeout(_this2.timer);
+      _this2.timer = setTimeout(function () {
+        _this2.tipShow = false;
       }, 1000);
       uni.stopPullDownRefresh();
     });

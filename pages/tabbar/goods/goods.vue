@@ -17,7 +17,6 @@
 		<view class="tips" :class="{ 'tips-ani': tipShow }">更新了！</view>
 		<!-- 页面分类标题 -->
 		<uni-section title="二手好物" type="line"><button class="button-box" @click="select">切换视图</button></uni-section>
-
 		<unicloud-db ref="udb" v-slot:default="{data, loading, error, options}" :options="formData"
 			collection="opendb-mall-goods" :where="where" :field="field" @load="load">
 			<!-- 基于 uni-list 的页面布局 -->
@@ -88,15 +87,19 @@
 		},
 		computed: {
 			where() {
+				// i忽略大小写
 				return `${new RegExp(this.keyWord, 'i')}.test(name)` // 使用计算属性得到完整where
 			}
 		},
-		onLoad(options) {
-			// // 获取搜索页面传来的key word
-			// this.keyWord=options.keyWord
-			// console.log(options)
-			this.keyWord="名称"
+		onLoad(option) {
 			const db = uniCloud.database()
+			if(option){
+				console.log(option)
+				this.timer = setTimeout(() => {
+					this.keyWord = option.keyWord
+				}, 500)
+			}
+
 			function refreshToken({
 				token,
 				tokenExpired
@@ -107,8 +110,7 @@
 			// 绑定刷新token事件
 			db.on('refreshToken', refreshToken)
 		},
-		onShow() {
-		},
+
 		methods: {
 
 			/**
@@ -128,8 +130,11 @@
 					url: "/pages/searchPage/searchPage"
 				})
 			},
-			test(){
-				this.keyWord="名称"
+			test() {
+				console.log("goods test")
+				uni.navigateTo({
+					url: "/pages/goods/goods"
+				})
 			}
 		},
 

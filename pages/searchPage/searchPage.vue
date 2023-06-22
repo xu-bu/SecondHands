@@ -1,8 +1,7 @@
 <template>
 	<view>
 		<view class="search-box">
-			<uni-search-bar @input="input" :radius="100" cancel-button="none"
-				@confirm="search"></uni-search-bar>
+			<uni-search-bar @input="input" :radius="100" cancel-button="none" @confirm="search"></uni-search-bar>
 		</view>
 		<view class="history-box">
 			<view class="title">
@@ -42,8 +41,8 @@
 				this.historyList.push(keyword)
 			},
 			search(res) {
-				uni.redirectTo({
-					url:'/pages/tabbar/goods/goods?keyWord='+this.keyWord
+				wx.reLaunch({
+					url: '/pages/tabbar/goods/goods?keyWord=' + res.value
 				})
 				uni.showToast({
 					title: '搜索：' + res.value,

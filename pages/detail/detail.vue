@@ -40,6 +40,8 @@
 		},
 		methods: {
 			onLoad(option) {
+				console.log(option.id)
+				console.log(option.title)
 				this.getGoodsInfo(option.id)
 			},
 			copy() {
