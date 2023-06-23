@@ -165,15 +165,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(wx, uni) {
+/* WEBPACK VAR INJECTION */(function(uni, wx) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
+var _mobxMiniprogram = __webpack_require__(/*! mobx-miniprogram */ 537);
 //
 //
 //
@@ -197,8 +197,11 @@ var _default = {
       //防抖延时器，延时后才会打印input内容
       timer: null,
       keyWord: "",
-      historyList: ['a', 'b', 'c']
+      historyList: []
     };
+  },
+  onLoad: function onLoad() {
+    this.historyList = JSON.parse(uni.getStorageSync('history') || '[]');
   },
   methods: {
     //在search bar中输入文本时的响应函数
@@ -209,22 +212,15 @@ var _default = {
       this.timer = setTimeout(function () {
         _this.keyWord = e;
       }, 500);
+      console.log(this.historyList);
     },
-    getSearchList: function getSearchList() {
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    saveSearchHistory: function saveSearchHistory(keyword) {
-      this.historyList.push(keyword);
+    saveSearchHistory: function saveSearchHistory(keyWord) {
+      var set = new Set(this.historyList);
+      set.delete(keyWord);
+      set.add(keyWord);
+      this.historyList = Array.from(set);
+      // JSON格式持久化到本地
+      uni.setStorageSync('history', JSON.stringify(this.historyList));
     },
     search: function search(res) {
       wx.reLaunch({
@@ -234,11 +230,17 @@ var _default = {
         title: '搜索：' + res.value,
         icon: 'none'
       });
+      this.saveSearchHistory(res.value);
+    }
+  },
+  computed: {
+    histories: function histories() {
+      return (0, _toConsumableArray2.default)(this.historyList).reverse();
     }
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
 
 /***/ }),
 

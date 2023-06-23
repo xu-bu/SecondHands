@@ -9,21 +9,25 @@
 				<uni-icons type="trash" size="17"></uni-icons>
 			</view>
 			<view class="history-list">
-				<uni-tag :text="item" v-for="(item,i) in historyList" :key="i"></uni-tag>
+				<uni-tag :text="item" v-for="(item,i) in histories" :key="i" ></uni-tag>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+import { set } from 'mobx-miniprogram';
 	export default {
 		data() {
 			return {
 				//防抖延时器，延时后才会打印input内容
 				timer: null,
 				keyWord: "",
-				historyList: ['a', 'b', 'c']
+				historyList: []
 			};
+		},
+		onLoad() {
+			this.historyList=JSON.parse(uni.getStorageSync('history')||'[]')
 		},
 		methods: {
 			//在search bar中输入文本时的响应函数
@@ -33,12 +37,15 @@
 				this.timer = setTimeout(() => {
 					this.keyWord = e
 				}, 500)
+				console.log(this.historyList)
 			},
-			async getSearchList() {
-
-			},
-			saveSearchHistory(keyword) {
-				this.historyList.push(keyword)
+			saveSearchHistory(keyWord) {
+				const set=new Set(this.historyList)
+				set.delete(keyWord)
+				set.add(keyWord)
+				this.historyList=Array.from(set)
+				// JSON格式持久化到本地
+				uni.setStorageSync('history',JSON.stringify(this.historyList))
 			},
 			search(res) {
 				wx.reLaunch({
@@ -48,6 +55,12 @@
 					title: '搜索：' + res.value,
 					icon: 'none'
 				})
+				this.saveSearchHistory(res.value)
+			}
+		},
+		computed:{
+			histories(){
+				return [...this.historyList].reverse()
 			}
 		}
 	}
