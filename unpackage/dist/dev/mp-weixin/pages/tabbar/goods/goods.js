@@ -279,8 +279,7 @@ var _default = {
   onLoad: function onLoad(option) {
     var _this = this;
     var db = uniCloud.database();
-    if (option) {
-      console.log(option);
+    if (typeof option.keyWord != 'undefined') {
       this.timer = setTimeout(function () {
         _this.keyWord = option.keyWord;
       }, 500);
@@ -308,7 +307,7 @@ var _default = {
     },
     search: function search() {
       uni.navigateTo({
-        url: "/pages/searchPage/searchPage"
+        url: "/pages/searchPage/searchPage?keyWord=" + this.keyWord
       });
     },
     test: function test() {

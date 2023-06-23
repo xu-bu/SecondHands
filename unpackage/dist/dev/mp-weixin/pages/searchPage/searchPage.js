@@ -200,8 +200,12 @@ var _default = {
       historyList: []
     };
   },
-  onLoad: function onLoad() {
+  onLoad: function onLoad(option) {
     this.historyList = JSON.parse(uni.getStorageSync('history') || '[]');
+    if (typeof option.keyWord != 'undefined') {
+      this.keyWord = option.keyWord;
+      console.log(this.keyWord);
+    }
   },
   methods: {
     //在search bar中输入文本时的响应函数
@@ -231,6 +235,15 @@ var _default = {
         icon: 'none'
       });
       this.saveSearchHistory(res.value);
+    },
+    searchHistory: function searchHistory(keyWord) {
+      wx.reLaunch({
+        url: '/pages/tabbar/goods/goods?keyWord=' + keyWord
+      });
+    },
+    clean: function clean() {
+      this.historyList = [];
+      uni.setStorageSync('history', '[]');
     }
   },
   computed: {

@@ -1,15 +1,15 @@
 <template>
 	<view>
 		<view class="search-box">
-			<uni-search-bar @input="input" :radius="100" cancel-button="none" @confirm="search"></uni-search-bar>
+			<uni-search-bar v-model="keyWord" @input="input" :focus="true" :radius="100" cancel-button="none" @confirm="search"></uni-search-bar>
 		</view>
 		<view class="history-box">
 			<view class="title">
 				<text>搜索历史</text>
-				<uni-icons type="trash" size="17"></uni-icons>
+				<uni-icons type="trash" size="17" @click="clean"></uni-icons>
 			</view>
 			<view class="history-list">
-				<uni-tag :text="item" v-for="(item,i) in histories" :key="i" ></uni-tag>
+				<uni-tag :text="item" v-for="(item,i) in histories" :key="i" @click="searchHistory(item)"></uni-tag>
 			</view>
 		</view>
 	</view>
@@ -26,8 +26,12 @@ import { set } from 'mobx-miniprogram';
 				historyList: []
 			};
 		},
-		onLoad() {
+		onLoad(option) {
 			this.historyList=JSON.parse(uni.getStorageSync('history')||'[]')
+			if(typeof option.keyWord!='undefined'){
+				this.keyWord = option.keyWord
+				console.log(this.keyWord)
+			}
 		},
 		methods: {
 			//在search bar中输入文本时的响应函数
@@ -56,6 +60,15 @@ import { set } from 'mobx-miniprogram';
 					icon: 'none'
 				})
 				this.saveSearchHistory(res.value)
+			},
+			searchHistory(keyWord){
+				wx.reLaunch({
+					url: '/pages/tabbar/goods/goods?keyWord=' + keyWord
+				})
+			},
+			clean(){
+				this.historyList=[]
+				uni.setStorageSync('history','[]')
 			}
 		},
 		computed:{
