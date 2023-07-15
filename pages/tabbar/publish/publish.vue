@@ -51,11 +51,6 @@
 			};
 		},
 		methods: {
-			onLoad() {
-				uni.showModal({
-					content: getApp().globalData.baseURL
-				})
-			},
 			onShow: function() {
 				const pages = getCurrentPages()
 				const perpage = pages[pages.length - 1]

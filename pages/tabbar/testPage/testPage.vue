@@ -8,17 +8,17 @@
 	export default {
 		data() {
 			return {
-				item:{
-					"name":"",
-					"phone":""
+				item: {
+					"name": "",
+					"phone": ""
 				}
 			}
 		},
 		computed: {
-		    where() {
-		      return `${new RegExp(this.searchVal, 'i')}.test(name)` // 使用计算属性得到完整where
-		    }
-		  },
+			where() {
+				return `${new RegExp(this.searchVal, 'i')}.test(name)` // 使用计算属性得到完整where
+			}
+		},
 		methods: {
 			async callco() {
 				console.log("test")
@@ -29,13 +29,22 @@
 					showCancel: false
 				})
 			},
-			test(){
-				uni.switchTab({
-					url: "/pages/tabbar/goods/goods",
-					success: (res) => {
-						let page = getCurrentPages().pop();
-						if (page == undefined || page == null) return;
-						page.onLoad();
+			test() {
+				uni.setClipboardData({
+					data: 'Yo',
+					success() {
+						uni.showToast({
+							title: '复制成功',
+							icon: 'success',
+							duration: 2000
+						})
+					},
+					fail() {
+						uni.showToast({
+							title: '复制失败',
+							icon: 'none',
+							duration: 2000
+						})
 					}
 				})
 			}
