@@ -89,9 +89,6 @@
 				});
 			},
 			async onSubmit() {
-				// console.log(this.content)
-				// console.log(this.title)
-				// console.log(this.price)
 				try {
 					await this.$refs.files.upload()
 				} catch (e) {
