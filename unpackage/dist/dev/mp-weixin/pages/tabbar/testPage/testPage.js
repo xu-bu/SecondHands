@@ -149,7 +149,7 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
-      contact: "contact"
+      code: ""
     };
   },
   computed: {
@@ -164,10 +164,20 @@ var _default = {
       console.log("test");
       uni.login({
         provider: 'weixin',
-        //使用微信登录
         success: function success(loginRes) {
-          uni.showModal({
-            content: loginRes.authResult
+          console.log(loginRes.code);
+          var APPID = "wx983fb58e4689ec79";
+          var secret = "65e839cb3a6ed276c0c07564c3153a79";
+          var url = 'https://api.weixin.qq.com/sns/jscode2session?appid=' + APPID + '&secret=' + secret + '&js_code=' + loginRes.code + '&grant_type=authorization_code';
+          console.log(url);
+          uni.request({
+            url: url,
+            // 请求路径
+            success: function success(result) {
+              uni.showModal({
+                content: result.data.openid
+              });
+            }
           });
         }
       });

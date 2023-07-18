@@ -8,7 +8,7 @@
      -->
 
 	<view class="list">
-		<button @click="test">test</button>
+		<!-- <button @click="test">test</button> -->
 		<view class="search-box">
 			<searchBar @myclick="search"></searchBar>
 		</view>
