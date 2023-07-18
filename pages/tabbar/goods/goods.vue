@@ -82,7 +82,7 @@
 					status: 'loading', // 加载状态
 				},
 				tipShow: false, // 是否显示顶部提示框
-				keyWord: "" //用于搜索
+				keyWord: "" //用于搜索,
 			};
 		},
 		computed: {
@@ -98,6 +98,8 @@
 					this.keyWord = option.keyWord
 				}, 500)
 			}
+			
+			
 
 			function refreshToken({
 				token,

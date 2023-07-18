@@ -118,7 +118,8 @@
 								goods_desc: this.content,
 								goods_price: this.price,
 								goods_banner_imgs: url,
-								goods_thumb: url[0]
+								goods_thumb: url[0],
+								seller_wechat:this.contact
 							})
 						} catch (e) {
 							this.backToIndex()

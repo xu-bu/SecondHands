@@ -121,7 +121,7 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 
 /***/ }),
 
-/***/ 138:
+/***/ 137:
 /*!***********************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/common/store.js ***!
   \***********************************************************************************************/
@@ -136,11 +136,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.store = exports.mutations = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 31));
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 33));
-var _pages = _interopRequireDefault(__webpack_require__(/*! @/pages.json */ 42));
-var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 44));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+var _pages = _interopRequireDefault(__webpack_require__(/*! @/pages.json */ 37));
+var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 43));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -367,7 +367,7 @@ exports.mutations = mutations;
 // 通过Vue.observable创建一个可响应的对象
 var store = _vue.default.observable(data);
 exports.store = store;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 35)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
@@ -439,7 +439,7 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
-/***/ 163:
+/***/ 162:
 /*!**********************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/common/login-page.mixin.js ***!
   \**********************************************************************************************************/
@@ -455,8 +455,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _store = __webpack_require__(/*! @/uni_modules/uni-id-pages/common/store.js */ 138);
-var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 44));
+var _store = __webpack_require__(/*! @/uni_modules/uni-id-pages/common/store.js */ 137);
+var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 43));
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var mixin = {
@@ -585,7 +585,7 @@ module.exports = _toConsumableArray, module.exports.__esModule = true, module.ex
 
 /***/ }),
 
-/***/ 188:
+/***/ 187:
 /*!***********************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/pages/register/validator.js ***!
   \***********************************************************************************************************/
@@ -601,7 +601,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _password = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/password.js */ 189));
+var _password = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/password.js */ 188));
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var _default = _objectSpread({
@@ -661,7 +661,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 189:
+/***/ 188:
 /*!**************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/common/password.js ***!
   \**************************************************************************************************/
@@ -676,7 +676,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 44));
+var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 43));
 // 导入配置
 
 var passwordStrength = _config.default.passwordStrength;
@@ -2286,7 +2286,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -9309,7 +9309,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -9330,14 +9330,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9433,7 +9433,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9851,14 +9851,14 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 252:
+/***/ 251:
 /*!************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ 253);
+var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ 252);
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
   var target = objectWithoutPropertiesLoose(source, excluded);
@@ -9878,7 +9878,7 @@ module.exports = _objectWithoutProperties, module.exports.__esModule = true, mod
 
 /***/ }),
 
-/***/ 253:
+/***/ 252:
 /*!*****************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
   \*****************************************************************************/
@@ -9901,7 +9901,7 @@ module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true
 
 /***/ }),
 
-/***/ 254:
+/***/ 253:
 /*!*******************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/common/check-id-card.js ***!
   \*******************************************************************************************************/
@@ -9940,7 +9940,7 @@ function checkIdCard(idCardNumber) {
 
 /***/ }),
 
-/***/ 263:
+/***/ 262:
 /*!**************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/node_modules/mobx-miniprogram/miniprogram_dist/index.js ***!
   \**************************************************************************************************************/
@@ -10239,7 +10239,7 @@ function createDecoratorForEnhancer(e) {
   var t = createPropDecorator(!0, function (t, r, n, o, a) {
       defineObservableProperty(t, r, n ? n.initializer ? n.initializer.call(t) : n.value : void 0, e);
     }),
-    r = ("undefined" != typeof process && Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}), t);
+    r = ("undefined" != typeof process && Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}), t);
   return r.enhancer = e, r;
 }
 var defaultCreateObservableOptions = {
@@ -12320,11 +12320,11 @@ var $mobx = "$mobx";
   },
   $mobx: $mobx
 }), exports.$mobx = $mobx, exports.ObservableMap = ObservableMap, exports.ObservableSet = ObservableSet, exports.Reaction = Reaction, exports._allowStateChanges = allowStateChanges, exports._allowStateChangesInsideComputed = allowStateChangesInsideComputed, exports._getAdministration = getAdministration, exports._getGlobalState = getGlobalState, exports._interceptReads = interceptReads, exports._isComputingDerivation = isComputingDerivation, exports._resetGlobalState = resetGlobalState, exports.action = action, exports.autorun = autorun, exports.comparer = comparer, exports.computed = computed, exports.configure = configure, exports.createAtom = createAtom, exports.decorate = decorate, exports.entries = entries, exports.extendObservable = extendObservable, exports.extendShallowObservable = extendShallowObservable, exports.flow = flow, exports.get = get, exports.getAtom = getAtom, exports.getDebugName = getDebugName, exports.getDependencyTree = getDependencyTree, exports.getObserverTree = getObserverTree, exports.has = has, exports.intercept = intercept, exports.isAction = isAction, exports.isArrayLike = isArrayLike, exports.isBoxedObservable = isObservableValue, exports.isComputed = isComputed, exports.isComputedProp = isComputedProp, exports.isObservable = isObservable, exports.isObservableArray = isObservableArray, exports.isObservableMap = isObservableMap, exports.isObservableObject = isObservableObject, exports.isObservableProp = isObservableProp, exports.isObservableSet = isObservableSet, exports.keys = keys, exports.observable = observable, exports.observe = observe, exports.onBecomeObserved = onBecomeObserved, exports.onBecomeUnobserved = onBecomeUnobserved, exports.onReactionError = onReactionError, exports.reaction = reaction, exports.remove = remove, exports.runInAction = runInAction, exports.set = set, exports.spy = spy, exports.toJS = toJS, exports.trace = trace, exports.transaction = transaction, exports.untracked = untracked, exports.values = values, exports.when = when;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ 3), __webpack_require__(/*! ./../../../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 264)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ 3), __webpack_require__(/*! ./../../../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 263)))
 
 /***/ }),
 
-/***/ 264:
+/***/ 263:
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -12355,7 +12355,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 265);
+        if (!path) path = __webpack_require__(/*! path */ 264);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -12369,7 +12369,7 @@ exports.features = {};
 
 /***/ }),
 
-/***/ 265:
+/***/ 264:
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -12679,1358 +12679,11 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 264)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 263)))
 
 /***/ }),
 
 /***/ 27:
-/*!****************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/automator.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(uni, wx) {var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-var CALL_METHOD_ERROR,
-  hasOwnProperty = Object.prototype.hasOwnProperty,
-  isUndef = function isUndef(v) {
-    return null == v;
-  },
-  isArray = Array.isArray,
-  PATH_RE = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
-function getPaths(path, data) {
-  if (isArray(path)) return path;
-  if (data && (val = data, key = path, hasOwnProperty.call(val, key))) return [path];
-  var val,
-    key,
-    res = [];
-  return path.replace(PATH_RE, function (match, p1, offset, string) {
-    return res.push(offset ? string.replace(/\\(\\)?/g, "$1") : p1 || match), string;
-  }), res;
-}
-function getPageId(page) {
-  return page.__wxWebviewId__ ? page.__wxWebviewId__ : page.privateProperties ? page.privateProperties.slaveId : page.$page ? page.$page.id : void 0;
-}
-function getPagePath(page) {
-  return page.route || page.uri;
-}
-function getPageQuery(page) {
-  return page.options || page.$page && page.$page.options || {};
-}
-function parsePage(page) {
-  return {
-    id: getPageId(page),
-    path: getPagePath(page),
-    query: getPageQuery(page)
-  };
-}
-function getPageVm(id) {
-  var page = function (id) {
-    return getCurrentPages().find(function (page) {
-      return getPageId(page) === id;
-    });
-  }(id);
-  return page && page.$vm;
-}
-function findComponentVm(vm, nodeId) {
-  var res;
-  return vm && (!function (vm, nodeId) {
-    return vm.$scope && ((scope = vm.$scope).__wxExparserNodeId__ || scope.nodeId || scope.id) === nodeId;
-    var scope;
-  }(vm, nodeId) ? vm.$children.find(function (child) {
-    return res = findComponentVm(child, nodeId);
-  }) : res = vm), res;
-}
-function getComponentVm(pageId, nodeId) {
-  var pageVm = getPageVm(pageId);
-  return pageVm && findComponentVm(pageVm, nodeId);
-}
-function _getData(vm, path) {
-  var data;
-  return vm && (data = path ? function (data, path) {
-    var dataPath,
-      paths = getPaths(path, data);
-    for (dataPath = paths.shift(); !isUndef(dataPath);) {
-      if (null == (data = data[dataPath])) return;
-      dataPath = paths.shift();
-    }
-    return data;
-  }(vm.$data, path) : Object.assign({}, vm.$data)), Promise.resolve({
-    data: data
-  });
-}
-function _setData(vm, data) {
-  return vm && Object.keys(data).forEach(function (name) {
-    vm[name] = data[name];
-  }), Promise.resolve();
-}
-function _callMethod(vm, method, args) {
-  return new Promise(function (resolve, reject) {
-    if (!vm) return reject(CALL_METHOD_ERROR.VM_NOT_EXISTS);
-    if (!vm[method]) return reject(CALL_METHOD_ERROR.VM_NOT_EXISTS);
-    var obj,
-      ret = vm[method].apply(vm, args);
-    !(obj = ret) || "object" != _typeof(obj) && "function" != typeof obj || "function" != typeof obj.then ? resolve({
-      result: ret
-    }) : ret.then(function (res) {
-      resolve({
-        result: res
-      });
-    });
-  });
-}
-!function (CALL_METHOD_ERROR) {
-  CALL_METHOD_ERROR.VM_NOT_EXISTS = "VM_NOT_EXISTS", CALL_METHOD_ERROR.METHOD_NOT_EXISTS = "METHOD_NOT_EXISTS";
-}(CALL_METHOD_ERROR || (CALL_METHOD_ERROR = {}));
-var SYNC_APIS = ["stopRecord", "getRecorderManager", "pauseVoice", "stopVoice", "pauseBackgroundAudio", "stopBackgroundAudio", "getBackgroundAudioManager", "createAudioContext", "createInnerAudioContext", "createVideoContext", "createCameraContext", "createMapContext", "canIUse", "startAccelerometer", "stopAccelerometer", "startCompass", "stopCompass", "hideToast", "hideLoading", "showNavigationBarLoading", "hideNavigationBarLoading", "navigateBack", "createAnimation", "pageScrollTo", "createSelectorQuery", "createCanvasContext", "createContext", "drawCanvas", "hideKeyboard", "stopPullDownRefresh", "arrayBufferToBase64", "base64ToArrayBuffer"],
-  originUni = {},
-  SYNC_API_RE = /Sync$/,
-  MOCK_API_BLACKLIST_RE = /^on|^off/;
-function isSyncApi(method) {
-  return SYNC_API_RE.test(method) || -1 !== SYNC_APIS.indexOf(method);
-}
-var App$1 = {
-    getPageStack: function getPageStack() {
-      return Promise.resolve({
-        pageStack: getCurrentPages().map(function (page) {
-          return parsePage(page);
-        })
-      });
-    },
-    getCurrentPage: function getCurrentPage() {
-      var pages = getCurrentPages(),
-        len = pages.length;
-      return new Promise(function (resolve, reject) {
-        len ? resolve(parsePage(pages[len - 1])) : reject(Error("getCurrentPages().length=0"));
-      });
-    },
-    callUniMethod: function callUniMethod(params) {
-      var method = params.method,
-        args = params.args;
-      return new Promise(function (resolve, reject) {
-        if (!uni[method]) return reject(Error("uni." + method + " not exists"));
-        if (isSyncApi(method)) return resolve({
-          result: uni[method].apply(uni, args)
-        });
-        var params = [Object.assign({}, args[0] || {}, {
-          success: function success(result) {
-            setTimeout(function () {
-              resolve({
-                result: result
-              });
-            }, "pageScrollTo" === method ? 350 : 0);
-          },
-          fail: function fail(res) {
-            reject(Error(res.errMsg.replace(method + ":fail ", "")));
-          }
-        })];
-        uni[method].apply(uni, params);
-      });
-    },
-    mockUniMethod: function mockUniMethod(params) {
-      var method = params.method;
-      if (!uni[method]) throw Error("uni." + method + " not exists");
-      if (!function (method) {
-        return !MOCK_API_BLACKLIST_RE.test(method);
-      }(method)) throw Error("You can't mock uni." + method);
-      var mockFn,
-        result = params.result,
-        functionDeclaration = params.functionDeclaration;
-      return isUndef(result) && isUndef(functionDeclaration) ? (originUni[method] && (uni[method] = originUni[method], delete originUni[method]), Promise.resolve()) : (mockFn = isUndef(functionDeclaration) ? isSyncApi(method) ? function () {
-        return result;
-      } : function (params) {
-        setTimeout(function () {
-          result.errMsg && -1 !== result.errMsg.indexOf(":fail") ? params.fail && params.fail(result) : params.success && params.success(result), params.complete && params.complete(result);
-        }, 4);
-      } : function () {
-        for (var args = [], _i = 0; _i < arguments.length; _i++) {
-          args[_i] = arguments[_i];
-        }
-        return new Function("return " + functionDeclaration)().apply(mockFn, args.concat(params.args));
-      }, mockFn.origin = originUni[method] || uni[method], originUni[method] || (originUni[method] = uni[method]), uni[method] = mockFn, Promise.resolve());
-    }
-  },
-  Page$1 = {
-    getData: function getData(params) {
-      return _getData(getPageVm(params.pageId), params.path);
-    },
-    setData: function setData(params) {
-      return _setData(getPageVm(params.pageId), params.data);
-    },
-    callMethod: function callMethod(params) {
-      var _a,
-        err = ((_a = {})[CALL_METHOD_ERROR.VM_NOT_EXISTS] = "Page[" + params.pageId + "] not exists", _a[CALL_METHOD_ERROR.METHOD_NOT_EXISTS] = "page." + params.method + " not exists", _a);
-      return new Promise(function (resolve, reject) {
-        _callMethod(getPageVm(params.pageId), params.method, params.args).then(function (res) {
-          return resolve(res);
-        }).catch(function (type) {
-          reject(Error(err[type]));
-        });
-      });
-    }
-  };
-function getNodeId(params) {
-  return params.nodeId || params.elementId;
-}
-var Element$1 = {
-    getData: function getData(params) {
-      return _getData(getComponentVm(params.pageId, getNodeId(params)), params.path);
-    },
-    setData: function setData(params) {
-      return _setData(getComponentVm(params.pageId, getNodeId(params)), params.data);
-    },
-    callMethod: function callMethod(params) {
-      var _a,
-        nodeId = getNodeId(params),
-        err = ((_a = {})[CALL_METHOD_ERROR.VM_NOT_EXISTS] = "Component[" + params.pageId + ":" + nodeId + "] not exists", _a[CALL_METHOD_ERROR.METHOD_NOT_EXISTS] = "component." + params.method + " not exists", _a);
-      return new Promise(function (resolve, reject) {
-        _callMethod(getComponentVm(params.pageId, nodeId), params.method, params.args).then(function (res) {
-          return resolve(res);
-        }).catch(function (type) {
-          reject(Error(err[type]));
-        });
-      });
-    }
-  },
-  Api = {};
-Object.keys(App$1).forEach(function (method) {
-  Api["App." + method] = App$1[method];
-}), Object.keys(Page$1).forEach(function (method) {
-  Api["Page." + method] = Page$1[method];
-}), Object.keys(Element$1).forEach(function (method) {
-  Api["Element." + method] = Element$1[method];
-});
-var socketTask,
-  wsEndpoint = "ws://172.16.3.158:9520";
-function send(data) {
-  socketTask.send({
-    data: JSON.stringify(data)
-  });
-}
-function onMessage(res) {
-  var _a = JSON.parse(res.data),
-    id = _a.id,
-    method = _a.method,
-    params = _a.params,
-    data = {
-      id: id
-    },
-    fn = Api[method];
-  if (!fn && !fn) return data.error = {
-    message: method + " unimplemented"
-  }, send(data);
-  try {
-    fn(params).then(function (res) {
-      res && (data.result = res);
-    }).catch(function (err) {
-      data.error = {
-        message: err.message
-      };
-    }).finally(function () {
-      send(data);
-    });
-  } catch (err) {
-    data.error = {
-      message: err.message
-    }, send(data);
-  }
-}
-wx.$$initRuntimeAutomator = function (options) {
-  void 0 === options && (options = {}), (socketTask = uni.connectSocket({
-    url: wsEndpoint,
-    complete: function complete() {}
-  })).onMessage(onMessage), socketTask.onOpen(function (res) {
-    options.success && options.success(), console.log("已开启自动化测试...");
-  }), socketTask.onError(function (res) {
-    console.log("automator.onError", res);
-  }), socketTask.onClose(function () {
-    options.fail && options.fail({
-      errMsg: "$$initRuntimeAutomator:fail"
-    }), console.log("automator.onClose");
-  });
-}, setTimeout(function () {
-  wx.$$initRuntimeAutomator();
-}, 500);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 287:
-/*!************************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/index.js ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 288);
-var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 288, 1);
-/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 289);
-var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 289, 1);
-/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 290);
-var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 290, 1);
-/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 291);
-var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 291, 1);
-/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 292);
-var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 292, 1);
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  en: _en_json__WEBPACK_IMPORTED_MODULE_0__,
-  es: _es_json__WEBPACK_IMPORTED_MODULE_1__,
-  fr: _fr_json__WEBPACK_IMPORTED_MODULE_2__,
-  'zh-Hans': _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__,
-  'zh-Hant': _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__
-});
-
-
-/***/ }),
-
-/***/ 288:
-/*!***********************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/en.json ***!
-  \***********************************************************************/
-/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"uniCloud.component.update.success\":\"Success\",\"uniCloud.component.remove.showModal.title\":\"Tips\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
-
-/***/ }),
-
-/***/ 289:
-/*!***********************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/es.json ***!
-  \***********************************************************************/
-/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
-
-/***/ }),
-
-/***/ 290:
-/*!***********************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/fr.json ***!
-  \***********************************************************************/
-/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
-
-/***/ }),
-
-/***/ 291:
-/*!****************************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hans.json ***!
-  \****************************************************************************/
-/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
-
-/***/ }),
-
-/***/ 292:
-/*!****************************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hant.json ***!
-  \****************************************************************************/
-/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否刪除數據\"}");
-
-/***/ }),
-
-/***/ 3:
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ 31:
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// TODO(Babel 8): Remove this file.
-
-var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 32)();
-module.exports = runtime;
-
-/***/ }),
-
-/***/ 312:
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/index.js ***!
-  \***********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 313));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 314));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 315));
-var _default = {
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 313:
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/en.json ***!
-  \**********************************************************************************************************************/
-/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"Pull up to show more\",\"uni-load-more.contentrefresh\":\"loading...\",\"uni-load-more.contentnomore\":\"No more data\"}");
-
-/***/ }),
-
-/***/ 314:
-/*!***************************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hans.json ***!
-  \***************************************************************************************************************************/
-/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉显示更多\",\"uni-load-more.contentrefresh\":\"正在加载...\",\"uni-load-more.contentnomore\":\"没有更多数据了\"}");
-
-/***/ }),
-
-/***/ 315:
-/*!***************************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hant.json ***!
-  \***************************************************************************************************************************/
-/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉顯示更多\",\"uni-load-more.contentrefresh\":\"正在加載...\",\"uni-load-more.contentnomore\":\"沒有更多數據了\"}");
-
-/***/ }),
-
-/***/ 32:
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-function _regeneratorRuntime() {
-  "use strict";
-
-  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
-    return exports;
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  var exports = {},
-    Op = Object.prototype,
-    hasOwn = Op.hasOwnProperty,
-    defineProperty = Object.defineProperty || function (obj, key, desc) {
-      obj[key] = desc.value;
-    },
-    $Symbol = "function" == typeof Symbol ? Symbol : {},
-    iteratorSymbol = $Symbol.iterator || "@@iterator",
-    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
-    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-  function define(obj, key, value) {
-    return Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }), obj[key];
-  }
-  try {
-    define({}, "");
-  } catch (err) {
-    define = function define(obj, key, value) {
-      return obj[key] = value;
-    };
-  }
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
-      generator = Object.create(protoGenerator.prototype),
-      context = new Context(tryLocsList || []);
-    return defineProperty(generator, "_invoke", {
-      value: makeInvokeMethod(innerFn, self, context)
-    }), generator;
-  }
-  function tryCatch(fn, obj, arg) {
-    try {
-      return {
-        type: "normal",
-        arg: fn.call(obj, arg)
-      };
-    } catch (err) {
-      return {
-        type: "throw",
-        arg: err
-      };
-    }
-  }
-  exports.wrap = wrap;
-  var ContinueSentinel = {};
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-  var IteratorPrototype = {};
-  define(IteratorPrototype, iteratorSymbol, function () {
-    return this;
-  });
-  var getProto = Object.getPrototypeOf,
-    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
-  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function (method) {
-      define(prototype, method, function (arg) {
-        return this._invoke(method, arg);
-      });
-    });
-  }
-  function AsyncIterator(generator, PromiseImpl) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if ("throw" !== record.type) {
-        var result = record.arg,
-          value = result.value;
-        return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
-          invoke("next", value, resolve, reject);
-        }, function (err) {
-          invoke("throw", err, resolve, reject);
-        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
-          result.value = unwrapped, resolve(result);
-        }, function (error) {
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-      reject(record.arg);
-    }
-    var previousPromise;
-    defineProperty(this, "_invoke", {
-      value: function value(method, arg) {
-        function callInvokeWithMethodAndArg() {
-          return new PromiseImpl(function (resolve, reject) {
-            invoke(method, arg, resolve, reject);
-          });
-        }
-        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
-      }
-    });
-  }
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = "suspendedStart";
-    return function (method, arg) {
-      if ("executing" === state) throw new Error("Generator is already running");
-      if ("completed" === state) {
-        if ("throw" === method) throw arg;
-        return doneResult();
-      }
-      for (context.method = method, context.arg = arg;;) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
-          if ("suspendedStart" === state) throw state = "completed", context.arg;
-          context.dispatchException(context.arg);
-        } else "return" === context.method && context.abrupt("return", context.arg);
-        state = "executing";
-        var record = tryCatch(innerFn, self, context);
-        if ("normal" === record.type) {
-          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
-          return {
-            value: record.arg,
-            done: context.done
-          };
-        }
-        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
-      }
-    };
-  }
-  function maybeInvokeDelegate(delegate, context) {
-    var methodName = context.method,
-      method = delegate.iterator[methodName];
-    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
-    var record = tryCatch(method, delegate.iterator, context.arg);
-    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
-    var info = record.arg;
-    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
-  }
-  function pushTryEntry(locs) {
-    var entry = {
-      tryLoc: locs[0]
-    };
-    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
-  }
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal", delete record.arg, entry.completion = record;
-  }
-  function Context(tryLocsList) {
-    this.tryEntries = [{
-      tryLoc: "root"
-    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
-  }
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) return iteratorMethod.call(iterable);
-      if ("function" == typeof iterable.next) return iterable;
-      if (!isNaN(iterable.length)) {
-        var i = -1,
-          next = function next() {
-            for (; ++i < iterable.length;) {
-              if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
-            }
-            return next.value = undefined, next.done = !0, next;
-          };
-        return next.next = next;
-      }
-    }
-    return {
-      next: doneResult
-    };
-  }
-  function doneResult() {
-    return {
-      value: undefined,
-      done: !0
-    };
-  }
-  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
-    value: GeneratorFunctionPrototype,
-    configurable: !0
-  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
-    value: GeneratorFunction,
-    configurable: !0
-  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
-    var ctor = "function" == typeof genFun && genFun.constructor;
-    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
-  }, exports.mark = function (genFun) {
-    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
-  }, exports.awrap = function (arg) {
-    return {
-      __await: arg
-    };
-  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
-    return this;
-  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
-    void 0 === PromiseImpl && (PromiseImpl = Promise);
-    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
-    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
-      return result.done ? result.value : iter.next();
-    });
-  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
-    return this;
-  }), define(Gp, "toString", function () {
-    return "[object Generator]";
-  }), exports.keys = function (val) {
-    var object = Object(val),
-      keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    return keys.reverse(), function next() {
-      for (; keys.length;) {
-        var key = keys.pop();
-        if (key in object) return next.value = key, next.done = !1, next;
-      }
-      return next.done = !0, next;
-    };
-  }, exports.values = values, Context.prototype = {
-    constructor: Context,
-    reset: function reset(skipTempReset) {
-      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
-        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
-      }
-    },
-    stop: function stop() {
-      this.done = !0;
-      var rootRecord = this.tryEntries[0].completion;
-      if ("throw" === rootRecord.type) throw rootRecord.arg;
-      return this.rval;
-    },
-    dispatchException: function dispatchException(exception) {
-      if (this.done) throw exception;
-      var context = this;
-      function handle(loc, caught) {
-        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
-      }
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i],
-          record = entry.completion;
-        if ("root" === entry.tryLoc) return handle("end");
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc"),
-            hasFinally = hasOwn.call(entry, "finallyLoc");
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
-            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
-          } else {
-            if (!hasFinally) throw new Error("try statement without catch or finally");
-            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
-          }
-        }
-      }
-    },
-    abrupt: function abrupt(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
-      var record = finallyEntry ? finallyEntry.completion : {};
-      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
-    },
-    complete: function complete(record, afterLoc) {
-      if ("throw" === record.type) throw record.arg;
-      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
-    },
-    finish: function finish(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
-      }
-    },
-    "catch": function _catch(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if ("throw" === record.type) {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-      throw new Error("illegal catch attempt");
-    },
-    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
-      return this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
-    }
-  }, exports;
-}
-module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 33:
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-      args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-      _next(undefined);
-    });
-  };
-}
-module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 330:
-/*!***************************************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-file-picker/components/uni-file-picker/choose-and-upload-file.js ***!
-  \***************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni, wx, uniCloud) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.chooseAndUploadFile = chooseAndUploadFile;
-exports.uploadCloudFiles = uploadCloudFiles;
-var ERR_MSG_OK = 'chooseAndUploadFile:ok';
-var ERR_MSG_FAIL = 'chooseAndUploadFile:fail';
-function chooseImage(opts) {
-  var count = opts.count,
-    _opts$sizeType = opts.sizeType,
-    sizeType = _opts$sizeType === void 0 ? ['original', 'compressed'] : _opts$sizeType,
-    sourceType = opts.sourceType,
-    extension = opts.extension;
-  return new Promise(function (resolve, reject) {
-    uni.chooseImage({
-      count: count,
-      sizeType: sizeType,
-      sourceType: sourceType,
-      extension: extension,
-      success: function success(res) {
-        resolve(normalizeChooseAndUploadFileRes(res, 'image'));
-      },
-      fail: function fail(res) {
-        reject({
-          errMsg: res.errMsg.replace('chooseImage:fail', ERR_MSG_FAIL)
-        });
-      }
-    });
-  });
-}
-function chooseVideo(opts) {
-  var camera = opts.camera,
-    compressed = opts.compressed,
-    maxDuration = opts.maxDuration,
-    sourceType = opts.sourceType,
-    extension = opts.extension;
-  return new Promise(function (resolve, reject) {
-    uni.chooseVideo({
-      camera: camera,
-      compressed: compressed,
-      maxDuration: maxDuration,
-      sourceType: sourceType,
-      extension: extension,
-      success: function success(res) {
-        var tempFilePath = res.tempFilePath,
-          duration = res.duration,
-          size = res.size,
-          height = res.height,
-          width = res.width;
-        resolve(normalizeChooseAndUploadFileRes({
-          errMsg: 'chooseVideo:ok',
-          tempFilePaths: [tempFilePath],
-          tempFiles: [{
-            name: res.tempFile && res.tempFile.name || '',
-            path: tempFilePath,
-            size: size,
-            type: res.tempFile && res.tempFile.type || '',
-            width: width,
-            height: height,
-            duration: duration,
-            fileType: 'video',
-            cloudPath: ''
-          }]
-        }, 'video'));
-      },
-      fail: function fail(res) {
-        reject({
-          errMsg: res.errMsg.replace('chooseVideo:fail', ERR_MSG_FAIL)
-        });
-      }
-    });
-  });
-}
-function chooseAll(opts) {
-  var count = opts.count,
-    extension = opts.extension;
-  return new Promise(function (resolve, reject) {
-    var chooseFile = uni.chooseFile;
-    if (typeof wx !== 'undefined' && typeof wx.chooseMessageFile === 'function') {
-      chooseFile = wx.chooseMessageFile;
-    }
-    if (typeof chooseFile !== 'function') {
-      return reject({
-        errMsg: ERR_MSG_FAIL + ' 请指定 type 类型，该平台仅支持选择 image 或 video。'
-      });
-    }
-    chooseFile({
-      type: 'all',
-      count: count,
-      extension: extension,
-      success: function success(res) {
-        resolve(normalizeChooseAndUploadFileRes(res));
-      },
-      fail: function fail(res) {
-        reject({
-          errMsg: res.errMsg.replace('chooseFile:fail', ERR_MSG_FAIL)
-        });
-      }
-    });
-  });
-}
-function normalizeChooseAndUploadFileRes(res, fileType) {
-  res.tempFiles.forEach(function (item, index) {
-    if (!item.name) {
-      item.name = item.path.substring(item.path.lastIndexOf('/') + 1);
-    }
-    if (fileType) {
-      item.fileType = fileType;
-    }
-    item.cloudPath = Date.now() + '_' + index + item.name.substring(item.name.lastIndexOf('.'));
-  });
-  if (!res.tempFilePaths) {
-    res.tempFilePaths = res.tempFiles.map(function (file) {
-      return file.path;
-    });
-  }
-  return res;
-}
-function uploadCloudFiles(files) {
-  var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
-  var _onUploadProgress = arguments.length > 2 ? arguments[2] : undefined;
-  files = JSON.parse(JSON.stringify(files));
-  var len = files.length;
-  var count = 0;
-  var self = this;
-  return new Promise(function (resolve) {
-    while (count < max) {
-      next();
-    }
-    function next() {
-      var cur = count++;
-      if (cur >= len) {
-        !files.find(function (item) {
-          return !item.url && !item.errMsg;
-        }) && resolve(files);
-        return;
-      }
-      var fileItem = files[cur];
-      var index = self.files.findIndex(function (v) {
-        return v.uuid === fileItem.uuid;
-      });
-      fileItem.url = '';
-      delete fileItem.errMsg;
-      uniCloud.uploadFile({
-        filePath: fileItem.path,
-        cloudPath: fileItem.cloudPath,
-        fileType: fileItem.fileType,
-        onUploadProgress: function onUploadProgress(res) {
-          res.index = index;
-          _onUploadProgress && _onUploadProgress(res);
-        }
-      }).then(function (res) {
-        fileItem.url = res.fileID;
-        fileItem.index = index;
-        if (cur < len) {
-          next();
-        }
-      }).catch(function (res) {
-        fileItem.errMsg = res.errMsg || res.message;
-        fileItem.index = index;
-        if (cur < len) {
-          next();
-        }
-      });
-    }
-  });
-}
-function uploadFiles(choosePromise, _ref) {
-  var onChooseFile = _ref.onChooseFile,
-    onUploadProgress = _ref.onUploadProgress;
-  return choosePromise.then(function (res) {
-    if (onChooseFile) {
-      var customChooseRes = onChooseFile(res);
-      if (typeof customChooseRes !== 'undefined') {
-        return Promise.resolve(customChooseRes).then(function (chooseRes) {
-          return typeof chooseRes === 'undefined' ? res : chooseRes;
-        });
-      }
-    }
-    return res;
-  }).then(function (res) {
-    if (res === false) {
-      return {
-        errMsg: ERR_MSG_OK,
-        tempFilePaths: [],
-        tempFiles: []
-      };
-    }
-    return res;
-  });
-}
-function chooseAndUploadFile() {
-  var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-    type: 'all'
-  };
-  if (opts.type === 'image') {
-    return uploadFiles(chooseImage(opts), opts);
-  } else if (opts.type === 'video') {
-    return uploadFiles(chooseVideo(opts), opts);
-  }
-  return uploadFiles(chooseAll(opts), opts);
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 35)["default"]))
-
-/***/ }),
-
-/***/ 331:
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-file-picker/components/uni-file-picker/utils.js ***!
-  \**********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.get_files_and_is_max = exports.get_file_info = exports.get_file_ext = exports.get_file_data = exports.get_extname = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 31));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 33));
-/**
- * 获取文件名和后缀
- * @param {String} name
- */
-var get_file_ext = function get_file_ext(name) {
-  var last_len = name.lastIndexOf('.');
-  var len = name.length;
-  return {
-    name: name.substring(0, last_len),
-    ext: name.substring(last_len + 1, len)
-  };
-};
-
-/**
- * 获取扩展名
- * @param {Array} fileExtname
- */
-exports.get_file_ext = get_file_ext;
-var get_extname = function get_extname(fileExtname) {
-  if (!Array.isArray(fileExtname)) {
-    var extname = fileExtname.replace(/(\[|\])/g, '');
-    return extname.split(',');
-  } else {
-    return fileExtname;
-  }
-  return [];
-};
-
-/**
- * 获取文件和检测是否可选
- */
-exports.get_extname = get_extname;
-var get_files_and_is_max = function get_files_and_is_max(res, _extname) {
-  var filePaths = [];
-  var files = [];
-  if (!_extname || _extname.length === 0) {
-    return {
-      filePaths: filePaths,
-      files: files
-    };
-  }
-  res.tempFiles.forEach(function (v) {
-    var fileFullName = get_file_ext(v.name);
-    var extname = fileFullName.ext.toLowerCase();
-    if (_extname.indexOf(extname) !== -1) {
-      files.push(v);
-      filePaths.push(v.path);
-    }
-  });
-  if (files.length !== res.tempFiles.length) {
-    uni.showToast({
-      title: "\u5F53\u524D\u9009\u62E9\u4E86".concat(res.tempFiles.length, "\u4E2A\u6587\u4EF6 \uFF0C").concat(res.tempFiles.length - files.length, " \u4E2A\u6587\u4EF6\u683C\u5F0F\u4E0D\u6B63\u786E"),
-      icon: 'none',
-      duration: 5000
-    });
-  }
-  return {
-    filePaths: filePaths,
-    files: files
-  };
-};
-
-/**
- * 获取图片信息
- * @param {Object} filepath
- */
-exports.get_files_and_is_max = get_files_and_is_max;
-var get_file_info = function get_file_info(filepath) {
-  return new Promise(function (resolve, reject) {
-    uni.getImageInfo({
-      src: filepath,
-      success: function success(res) {
-        resolve(res);
-      },
-      fail: function fail(err) {
-        reject(err);
-      }
-    });
-  });
-};
-/**
- * 获取封装数据
- */
-exports.get_file_info = get_file_info;
-var get_file_data = /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(files) {
-    var type,
-      fileFullName,
-      extname,
-      filedata,
-      imageinfo,
-      _args = arguments;
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            type = _args.length > 1 && _args[1] !== undefined ? _args[1] : 'image';
-            // 最终需要上传数据库的数据
-            fileFullName = get_file_ext(files.name);
-            extname = fileFullName.ext.toLowerCase();
-            filedata = {
-              name: files.name,
-              uuid: files.uuid,
-              extname: extname || '',
-              cloudPath: files.cloudPath,
-              fileType: files.fileType,
-              url: files.path || files.path,
-              size: files.size,
-              //单位是字节
-              image: {},
-              path: files.path,
-              video: {}
-            };
-            if (!(type === 'image')) {
-              _context.next = 14;
-              break;
-            }
-            _context.next = 7;
-            return get_file_info(files.path);
-          case 7:
-            imageinfo = _context.sent;
-            delete filedata.video;
-            filedata.image.width = imageinfo.width;
-            filedata.image.height = imageinfo.height;
-            filedata.image.location = imageinfo.path;
-            _context.next = 15;
-            break;
-          case 14:
-            delete filedata.image;
-          case 15:
-            return _context.abrupt("return", filedata);
-          case 16:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-  return function get_file_data(_x) {
-    return _ref.apply(this, arguments);
-  };
-}();
-exports.get_file_data = get_file_data;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 34:
-/*!***************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/init.js ***!
-  \***************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = _default;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 31));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 33));
-var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 44));
-// 导入配置
-
-// uni-id的云对象
-var uniIdCo = uniCloud.importObject('uni-id-co', {
-  customUI: true
-});
-// 用户配置的登录方式、是否打开调试模式
-var loginTypes = _config.default.loginTypes,
-  debug = _config.default.debug;
-function _default() {
-  return _ref.apply(this, arguments);
-}
-function _ref() {
-  _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-    var _yield$uniIdCo$getSup, supportedLoginType, data, list, db, onDBError;
-    return _regenerator.default.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            onDBError = function _onDBError(_ref2) {
-              var code = _ref2.code,
-                message = _ref2.message;
-            } // console.error('onDBError', {code,message});
-            ;
-            if (!debug) {
-              _context2.next = 10;
-              break;
-            }
-            _context2.next = 4;
-            return uniIdCo.getSupportedLoginType();
-          case 4:
-            _yield$uniIdCo$getSup = _context2.sent;
-            supportedLoginType = _yield$uniIdCo$getSup.supportedLoginType;
-            console.log('supportedLoginType: ' + JSON.stringify(supportedLoginType));
-            // 登录方式，服务端和客户端的映射关系
-            data = {
-              smsCode: 'mobile-code',
-              univerify: 'univerify',
-              username: 'username-password',
-              weixin: 'weixin',
-              qq: 'qq',
-              xiaomi: 'xiaomi',
-              sinaweibo: 'sinaweibo',
-              taobao: 'taobao',
-              facebook: 'facebook',
-              google: 'google',
-              alipay: 'alipay',
-              apple: 'apple',
-              weixinMobile: 'weixin'
-            }; // 遍历客户端配置的登录方式，与服务端比对。并在错误时抛出错误提示
-            list = loginTypes.filter(function (type) {
-              return !supportedLoginType.includes(data[type]);
-            });
-            if (list.length) {
-              console.error("\u9519\u8BEF\uFF1A\u524D\u7AEF\u542F\u7528\u7684\u767B\u5F55\u65B9\u5F0F:".concat(list.join('，'), ";\u6CA1\u6709\u5728\u670D\u52A1\u7AEF\u5B8C\u6210\u914D\u7F6E\u3002\u914D\u7F6E\u6587\u4EF6\u8DEF\u5F84\uFF1A\"/uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center/uni-id/config.json\""));
-            }
-          case 10:
-            // 3. 绑定clientDB错误事件
-            // clientDB对象
-            db = uniCloud.database();
-            db.on('error', onDBError);
-            // clientDB的错误提示
-
-            // 解绑clientDB错误事件
-            // db.off('error', onDBError)
-
-            // 4. 同步客户端push_clientid至device表
-            if (uniCloud.onRefreshToken) {
-              uniCloud.onRefreshToken(function () {
-                // console.log('onRefreshToken');
-                if (uni.getPushClientId) {
-                  uni.getPushClientId({
-                    success: function () {
-                      var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(e) {
-                        var pushClientId, res;
-                        return _regenerator.default.wrap(function _callee$(_context) {
-                          while (1) {
-                            switch (_context.prev = _context.next) {
-                              case 0:
-                                // console.log(e)
-                                pushClientId = e.cid; // console.log(pushClientId);
-                                _context.next = 3;
-                                return uniIdCo.setPushCid({
-                                  pushClientId: pushClientId
-                                });
-                              case 3:
-                                res = _context.sent;
-                              case 4:
-                              case "end":
-                                return _context.stop();
-                            }
-                          }
-                        }, _callee);
-                      }));
-                      function success(_x) {
-                        return _success.apply(this, arguments);
-                      }
-                      return success;
-                    }(),
-                    fail: function fail(e) {
-                      // console.log(e)
-                    }
-                  });
-                }
-              });
-            }
-          case 13:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }));
-  return _ref.apply(this, arguments);
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 35)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 35:
 /*!************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js ***!
   \************************************************************************************/
@@ -14045,21 +12698,21 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 31));
-var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ 36));
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ 30));
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
 var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 33));
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ 37));
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ 38));
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ 39));
-var _wrapNativeSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/wrapNativeSuper */ 40));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ 32));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ 33));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ 34));
+var _wrapNativeSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/wrapNativeSuper */ 35));
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
 var _uniI18n = __webpack_require__(/*! @dcloudio/uni-i18n */ 22);
-var _pages = _interopRequireDefault(__webpack_require__(/*! @/pages.json */ 42));
+var _pages = _interopRequireDefault(__webpack_require__(/*! @/pages.json */ 37));
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e34) { throw _e34; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e35) { didErr = true; err = _e35; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
@@ -14521,12 +13174,28 @@ var k = "development" === "development",
   C = "true" === undefined || !0 === undefined,
   P = b([]),
   A = "h5" === T ? "web" : "app-plus" === T ? "app" : T,
-  E = b(undefined),
-  O = b(undefined) || [],
+  E = b({
+    "address": [
+        "127.0.0.1",
+        "172.16.3.158",
+        "169.254.105.150",
+        "192.168.1.1",
+        "192.168.137.1"
+    ],
+    "debugPort": 9000,
+    "initialLaunchType": "remote",
+    "servePort": 7000,
+    "skipFiles": [
+        "<node_internals>/**",
+        "C:/HBuilderX/plugins/unicloud/**/*.js"
+    ]
+}
+),
+  O = b([{"provider":"aliyun","spaceName":"ali-cloud","spaceId":"mp-168046f4-78e7-43bb-a0ef-ad66252cccfd","clientSecret":"b6LXRvckaKcIFc3wx1AIxA==","endpoint":"https://api.next.bspapp.com"}]) || [],
   x = true;
 var R = "";
 try {
-  R = (__webpack_require__(/*! uni-stat-config */ 43).default || __webpack_require__(/*! uni-stat-config */ 43)).appid;
+  R = (__webpack_require__(/*! uni-stat-config */ 38).default || __webpack_require__(/*! uni-stat-config */ 38)).appid;
 } catch (e) {}
 var U = {};
 function L(e) {
@@ -21370,7 +20039,1069 @@ exports.default = Ns;
 
 /***/ }),
 
-/***/ 353:
+/***/ 28:
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// TODO(Babel 8): Remove this file.
+
+var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 29)();
+module.exports = runtime;
+
+/***/ }),
+
+/***/ 286:
+/*!************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/index.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 287);
+var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 287, 1);
+/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 288);
+var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 288, 1);
+/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 289);
+var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 289, 1);
+/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 290);
+var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 290, 1);
+/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 291);
+var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 291, 1);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  en: _en_json__WEBPACK_IMPORTED_MODULE_0__,
+  es: _es_json__WEBPACK_IMPORTED_MODULE_1__,
+  fr: _fr_json__WEBPACK_IMPORTED_MODULE_2__,
+  'zh-Hans': _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__,
+  'zh-Hant': _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__
+});
+
+
+/***/ }),
+
+/***/ 287:
+/*!***********************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/en.json ***!
+  \***********************************************************************/
+/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"uniCloud.component.update.success\":\"Success\",\"uniCloud.component.remove.showModal.title\":\"Tips\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
+
+/***/ }),
+
+/***/ 288:
+/*!***********************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/es.json ***!
+  \***********************************************************************/
+/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
+
+/***/ }),
+
+/***/ 289:
+/*!***********************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/fr.json ***!
+  \***********************************************************************/
+/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
+
+/***/ }),
+
+/***/ 29:
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+function _regeneratorRuntime() {
+  "use strict";
+
+  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+  module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
+    return exports;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  var exports = {},
+    Op = Object.prototype,
+    hasOwn = Op.hasOwnProperty,
+    defineProperty = Object.defineProperty || function (obj, key, desc) {
+      obj[key] = desc.value;
+    },
+    $Symbol = "function" == typeof Symbol ? Symbol : {},
+    iteratorSymbol = $Symbol.iterator || "@@iterator",
+    asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+    toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+  function define(obj, key, value) {
+    return Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    }), obj[key];
+  }
+  try {
+    define({}, "");
+  } catch (err) {
+    define = function define(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
+      generator = Object.create(protoGenerator.prototype),
+      context = new Context(tryLocsList || []);
+    return defineProperty(generator, "_invoke", {
+      value: makeInvokeMethod(innerFn, self, context)
+    }), generator;
+  }
+  function tryCatch(fn, obj, arg) {
+    try {
+      return {
+        type: "normal",
+        arg: fn.call(obj, arg)
+      };
+    } catch (err) {
+      return {
+        type: "throw",
+        arg: err
+      };
+    }
+  }
+  exports.wrap = wrap;
+  var ContinueSentinel = {};
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+  var getProto = Object.getPrototypeOf,
+    NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
+  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function (method) {
+      define(prototype, method, function (arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if ("throw" !== record.type) {
+        var result = record.arg,
+          value = result.value;
+        return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
+          invoke("next", value, resolve, reject);
+        }, function (err) {
+          invoke("throw", err, resolve, reject);
+        }) : PromiseImpl.resolve(value).then(function (unwrapped) {
+          result.value = unwrapped, resolve(result);
+        }, function (error) {
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+      reject(record.arg);
+    }
+    var previousPromise;
+    defineProperty(this, "_invoke", {
+      value: function value(method, arg) {
+        function callInvokeWithMethodAndArg() {
+          return new PromiseImpl(function (resolve, reject) {
+            invoke(method, arg, resolve, reject);
+          });
+        }
+        return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+      }
+    });
+  }
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = "suspendedStart";
+    return function (method, arg) {
+      if ("executing" === state) throw new Error("Generator is already running");
+      if ("completed" === state) {
+        if ("throw" === method) throw arg;
+        return doneResult();
+      }
+      for (context.method = method, context.arg = arg;;) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+        if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+          if ("suspendedStart" === state) throw state = "completed", context.arg;
+          context.dispatchException(context.arg);
+        } else "return" === context.method && context.abrupt("return", context.arg);
+        state = "executing";
+        var record = tryCatch(innerFn, self, context);
+        if ("normal" === record.type) {
+          if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        }
+        "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+      }
+    };
+  }
+  function maybeInvokeDelegate(delegate, context) {
+    var methodName = context.method,
+      method = delegate.iterator[methodName];
+    if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
+    var record = tryCatch(method, delegate.iterator, context.arg);
+    if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
+    var info = record.arg;
+    return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+  }
+  function pushTryEntry(locs) {
+    var entry = {
+      tryLoc: locs[0]
+    };
+    1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+  }
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal", delete record.arg, entry.completion = record;
+  }
+  function Context(tryLocsList) {
+    this.tryEntries = [{
+      tryLoc: "root"
+    }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+  }
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) return iteratorMethod.call(iterable);
+      if ("function" == typeof iterable.next) return iterable;
+      if (!isNaN(iterable.length)) {
+        var i = -1,
+          next = function next() {
+            for (; ++i < iterable.length;) {
+              if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+            }
+            return next.value = undefined, next.done = !0, next;
+          };
+        return next.next = next;
+      }
+    }
+    return {
+      next: doneResult
+    };
+  }
+  function doneResult() {
+    return {
+      value: undefined,
+      done: !0
+    };
+  }
+  return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+    value: GeneratorFunctionPrototype,
+    configurable: !0
+  }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+    value: GeneratorFunction,
+    configurable: !0
+  }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+    var ctor = "function" == typeof genFun && genFun.constructor;
+    return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
+  }, exports.mark = function (genFun) {
+    return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
+  }, exports.awrap = function (arg) {
+    return {
+      __await: arg
+    };
+  }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    void 0 === PromiseImpl && (PromiseImpl = Promise);
+    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+      return result.done ? result.value : iter.next();
+    });
+  }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+    return this;
+  }), define(Gp, "toString", function () {
+    return "[object Generator]";
+  }), exports.keys = function (val) {
+    var object = Object(val),
+      keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    return keys.reverse(), function next() {
+      for (; keys.length;) {
+        var key = keys.pop();
+        if (key in object) return next.value = key, next.done = !1, next;
+      }
+      return next.done = !0, next;
+    };
+  }, exports.values = values, Context.prototype = {
+    constructor: Context,
+    reset: function reset(skipTempReset) {
+      if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) {
+        "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
+      }
+    },
+    stop: function stop() {
+      this.done = !0;
+      var rootRecord = this.tryEntries[0].completion;
+      if ("throw" === rootRecord.type) throw rootRecord.arg;
+      return this.rval;
+    },
+    dispatchException: function dispatchException(exception) {
+      if (this.done) throw exception;
+      var context = this;
+      function handle(loc, caught) {
+        return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+      }
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i],
+          record = entry.completion;
+        if ("root" === entry.tryLoc) return handle("end");
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc"),
+            hasFinally = hasOwn.call(entry, "finallyLoc");
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+          } else {
+            if (!hasFinally) throw new Error("try statement without catch or finally");
+            if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+          }
+        }
+      }
+    },
+    abrupt: function abrupt(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+      finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
+      var record = finallyEntry ? finallyEntry.completion : {};
+      return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+    },
+    complete: function complete(record, afterLoc) {
+      if ("throw" === record.type) throw record.arg;
+      return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+    },
+    finish: function finish(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+      }
+    },
+    "catch": function _catch(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if ("throw" === record.type) {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+      throw new Error("illegal catch attempt");
+    },
+    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+      return this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+    }
+  }, exports;
+}
+module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 290:
+/*!****************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hans.json ***!
+  \****************************************************************************/
+/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否删除该数据\"}");
+
+/***/ }),
+
+/***/ 291:
+/*!****************************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hant.json ***!
+  \****************************************************************************/
+/*! exports provided: uniCloud.component.add.success, uniCloud.component.update.success, uniCloud.component.remove.showModal.title, uniCloud.component.remove.showModal.content, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\",\"uniCloud.component.update.success\":\"修改成功\",\"uniCloud.component.remove.showModal.title\":\"提示\",\"uniCloud.component.remove.showModal.content\":\"是否刪除數據\"}");
+
+/***/ }),
+
+/***/ 3:
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ 30:
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+  return self;
+}
+module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 31:
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+      args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+      _next(undefined);
+    });
+  };
+}
+module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 311:
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/index.js ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 312));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 313));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 314));
+var _default = {
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 312:
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/en.json ***!
+  \**********************************************************************************************************************/
+/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"Pull up to show more\",\"uni-load-more.contentrefresh\":\"loading...\",\"uni-load-more.contentnomore\":\"No more data\"}");
+
+/***/ }),
+
+/***/ 313:
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hans.json ***!
+  \***************************************************************************************************************************/
+/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉显示更多\",\"uni-load-more.contentrefresh\":\"正在加载...\",\"uni-load-more.contentnomore\":\"没有更多数据了\"}");
+
+/***/ }),
+
+/***/ 314:
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hant.json ***!
+  \***************************************************************************************************************************/
+/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉顯示更多\",\"uni-load-more.contentrefresh\":\"正在加載...\",\"uni-load-more.contentnomore\":\"沒有更多數據了\"}");
+
+/***/ }),
+
+/***/ 32:
+/*!*********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  Object.defineProperty(subClass, "prototype", {
+    writable: false
+  });
+  if (superClass) setPrototypeOf(subClass, superClass);
+}
+module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 329:
+/*!***************************************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-file-picker/components/uni-file-picker/choose-and-upload-file.js ***!
+  \***************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, wx, uniCloud) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.chooseAndUploadFile = chooseAndUploadFile;
+exports.uploadCloudFiles = uploadCloudFiles;
+var ERR_MSG_OK = 'chooseAndUploadFile:ok';
+var ERR_MSG_FAIL = 'chooseAndUploadFile:fail';
+function chooseImage(opts) {
+  var count = opts.count,
+    _opts$sizeType = opts.sizeType,
+    sizeType = _opts$sizeType === void 0 ? ['original', 'compressed'] : _opts$sizeType,
+    sourceType = opts.sourceType,
+    extension = opts.extension;
+  return new Promise(function (resolve, reject) {
+    uni.chooseImage({
+      count: count,
+      sizeType: sizeType,
+      sourceType: sourceType,
+      extension: extension,
+      success: function success(res) {
+        resolve(normalizeChooseAndUploadFileRes(res, 'image'));
+      },
+      fail: function fail(res) {
+        reject({
+          errMsg: res.errMsg.replace('chooseImage:fail', ERR_MSG_FAIL)
+        });
+      }
+    });
+  });
+}
+function chooseVideo(opts) {
+  var camera = opts.camera,
+    compressed = opts.compressed,
+    maxDuration = opts.maxDuration,
+    sourceType = opts.sourceType,
+    extension = opts.extension;
+  return new Promise(function (resolve, reject) {
+    uni.chooseVideo({
+      camera: camera,
+      compressed: compressed,
+      maxDuration: maxDuration,
+      sourceType: sourceType,
+      extension: extension,
+      success: function success(res) {
+        var tempFilePath = res.tempFilePath,
+          duration = res.duration,
+          size = res.size,
+          height = res.height,
+          width = res.width;
+        resolve(normalizeChooseAndUploadFileRes({
+          errMsg: 'chooseVideo:ok',
+          tempFilePaths: [tempFilePath],
+          tempFiles: [{
+            name: res.tempFile && res.tempFile.name || '',
+            path: tempFilePath,
+            size: size,
+            type: res.tempFile && res.tempFile.type || '',
+            width: width,
+            height: height,
+            duration: duration,
+            fileType: 'video',
+            cloudPath: ''
+          }]
+        }, 'video'));
+      },
+      fail: function fail(res) {
+        reject({
+          errMsg: res.errMsg.replace('chooseVideo:fail', ERR_MSG_FAIL)
+        });
+      }
+    });
+  });
+}
+function chooseAll(opts) {
+  var count = opts.count,
+    extension = opts.extension;
+  return new Promise(function (resolve, reject) {
+    var chooseFile = uni.chooseFile;
+    if (typeof wx !== 'undefined' && typeof wx.chooseMessageFile === 'function') {
+      chooseFile = wx.chooseMessageFile;
+    }
+    if (typeof chooseFile !== 'function') {
+      return reject({
+        errMsg: ERR_MSG_FAIL + ' 请指定 type 类型，该平台仅支持选择 image 或 video。'
+      });
+    }
+    chooseFile({
+      type: 'all',
+      count: count,
+      extension: extension,
+      success: function success(res) {
+        resolve(normalizeChooseAndUploadFileRes(res));
+      },
+      fail: function fail(res) {
+        reject({
+          errMsg: res.errMsg.replace('chooseFile:fail', ERR_MSG_FAIL)
+        });
+      }
+    });
+  });
+}
+function normalizeChooseAndUploadFileRes(res, fileType) {
+  res.tempFiles.forEach(function (item, index) {
+    if (!item.name) {
+      item.name = item.path.substring(item.path.lastIndexOf('/') + 1);
+    }
+    if (fileType) {
+      item.fileType = fileType;
+    }
+    item.cloudPath = Date.now() + '_' + index + item.name.substring(item.name.lastIndexOf('.'));
+  });
+  if (!res.tempFilePaths) {
+    res.tempFilePaths = res.tempFiles.map(function (file) {
+      return file.path;
+    });
+  }
+  return res;
+}
+function uploadCloudFiles(files) {
+  var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
+  var _onUploadProgress = arguments.length > 2 ? arguments[2] : undefined;
+  files = JSON.parse(JSON.stringify(files));
+  var len = files.length;
+  var count = 0;
+  var self = this;
+  return new Promise(function (resolve) {
+    while (count < max) {
+      next();
+    }
+    function next() {
+      var cur = count++;
+      if (cur >= len) {
+        !files.find(function (item) {
+          return !item.url && !item.errMsg;
+        }) && resolve(files);
+        return;
+      }
+      var fileItem = files[cur];
+      var index = self.files.findIndex(function (v) {
+        return v.uuid === fileItem.uuid;
+      });
+      fileItem.url = '';
+      delete fileItem.errMsg;
+      uniCloud.uploadFile({
+        filePath: fileItem.path,
+        cloudPath: fileItem.cloudPath,
+        fileType: fileItem.fileType,
+        onUploadProgress: function onUploadProgress(res) {
+          res.index = index;
+          _onUploadProgress && _onUploadProgress(res);
+        }
+      }).then(function (res) {
+        fileItem.url = res.fileID;
+        fileItem.index = index;
+        if (cur < len) {
+          next();
+        }
+      }).catch(function (res) {
+        fileItem.errMsg = res.errMsg || res.message;
+        fileItem.index = index;
+        if (cur < len) {
+          next();
+        }
+      });
+    }
+  });
+}
+function uploadFiles(choosePromise, _ref) {
+  var onChooseFile = _ref.onChooseFile,
+    onUploadProgress = _ref.onUploadProgress;
+  return choosePromise.then(function (res) {
+    if (onChooseFile) {
+      var customChooseRes = onChooseFile(res);
+      if (typeof customChooseRes !== 'undefined') {
+        return Promise.resolve(customChooseRes).then(function (chooseRes) {
+          return typeof chooseRes === 'undefined' ? res : chooseRes;
+        });
+      }
+    }
+    return res;
+  }).then(function (res) {
+    if (res === false) {
+      return {
+        errMsg: ERR_MSG_OK,
+        tempFilePaths: [],
+        tempFiles: []
+      };
+    }
+    return res;
+  });
+}
+function chooseAndUploadFile() {
+  var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+    type: 'all'
+  };
+  if (opts.type === 'image') {
+    return uploadFiles(chooseImage(opts), opts);
+  } else if (opts.type === 'video') {
+    return uploadFiles(chooseVideo(opts), opts);
+  }
+  return uploadFiles(chooseAll(opts), opts);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"]))
+
+/***/ }),
+
+/***/ 33:
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 30);
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+  return assertThisInitialized(self);
+}
+module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 330:
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-file-picker/components/uni-file-picker/utils.js ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.get_files_and_is_max = exports.get_file_info = exports.get_file_ext = exports.get_file_data = exports.get_extname = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+/**
+ * 获取文件名和后缀
+ * @param {String} name
+ */
+var get_file_ext = function get_file_ext(name) {
+  var last_len = name.lastIndexOf('.');
+  var len = name.length;
+  return {
+    name: name.substring(0, last_len),
+    ext: name.substring(last_len + 1, len)
+  };
+};
+
+/**
+ * 获取扩展名
+ * @param {Array} fileExtname
+ */
+exports.get_file_ext = get_file_ext;
+var get_extname = function get_extname(fileExtname) {
+  if (!Array.isArray(fileExtname)) {
+    var extname = fileExtname.replace(/(\[|\])/g, '');
+    return extname.split(',');
+  } else {
+    return fileExtname;
+  }
+  return [];
+};
+
+/**
+ * 获取文件和检测是否可选
+ */
+exports.get_extname = get_extname;
+var get_files_and_is_max = function get_files_and_is_max(res, _extname) {
+  var filePaths = [];
+  var files = [];
+  if (!_extname || _extname.length === 0) {
+    return {
+      filePaths: filePaths,
+      files: files
+    };
+  }
+  res.tempFiles.forEach(function (v) {
+    var fileFullName = get_file_ext(v.name);
+    var extname = fileFullName.ext.toLowerCase();
+    if (_extname.indexOf(extname) !== -1) {
+      files.push(v);
+      filePaths.push(v.path);
+    }
+  });
+  if (files.length !== res.tempFiles.length) {
+    uni.showToast({
+      title: "\u5F53\u524D\u9009\u62E9\u4E86".concat(res.tempFiles.length, "\u4E2A\u6587\u4EF6 \uFF0C").concat(res.tempFiles.length - files.length, " \u4E2A\u6587\u4EF6\u683C\u5F0F\u4E0D\u6B63\u786E"),
+      icon: 'none',
+      duration: 5000
+    });
+  }
+  return {
+    filePaths: filePaths,
+    files: files
+  };
+};
+
+/**
+ * 获取图片信息
+ * @param {Object} filepath
+ */
+exports.get_files_and_is_max = get_files_and_is_max;
+var get_file_info = function get_file_info(filepath) {
+  return new Promise(function (resolve, reject) {
+    uni.getImageInfo({
+      src: filepath,
+      success: function success(res) {
+        resolve(res);
+      },
+      fail: function fail(err) {
+        reject(err);
+      }
+    });
+  });
+};
+/**
+ * 获取封装数据
+ */
+exports.get_file_info = get_file_info;
+var get_file_data = /*#__PURE__*/function () {
+  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(files) {
+    var type,
+      fileFullName,
+      extname,
+      filedata,
+      imageinfo,
+      _args = arguments;
+    return _regenerator.default.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            type = _args.length > 1 && _args[1] !== undefined ? _args[1] : 'image';
+            // 最终需要上传数据库的数据
+            fileFullName = get_file_ext(files.name);
+            extname = fileFullName.ext.toLowerCase();
+            filedata = {
+              name: files.name,
+              uuid: files.uuid,
+              extname: extname || '',
+              cloudPath: files.cloudPath,
+              fileType: files.fileType,
+              url: files.path || files.path,
+              size: files.size,
+              //单位是字节
+              image: {},
+              path: files.path,
+              video: {}
+            };
+            if (!(type === 'image')) {
+              _context.next = 14;
+              break;
+            }
+            _context.next = 7;
+            return get_file_info(files.path);
+          case 7:
+            imageinfo = _context.sent;
+            delete filedata.video;
+            filedata.image.width = imageinfo.width;
+            filedata.image.height = imageinfo.height;
+            filedata.image.location = imageinfo.path;
+            _context.next = 15;
+            break;
+          case 14:
+            delete filedata.image;
+          case 15:
+            return _context.abrupt("return", filedata);
+          case 16:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return function get_file_data(_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+exports.get_file_data = get_file_data;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 34:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _getPrototypeOf(o);
+}
+module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 35:
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ 34);
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
+var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ 36);
+var construct = __webpack_require__(/*! ./construct.js */ 15);
+function _wrapNativeSuper(Class) {
+  var _cache = typeof Map === "function" ? new Map() : undefined;
+  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
+    if (Class === null || !isNativeFunction(Class)) return Class;
+    if (typeof Class !== "function") {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+    if (typeof _cache !== "undefined") {
+      if (_cache.has(Class)) return _cache.get(Class);
+      _cache.set(Class, Wrapper);
+    }
+    function Wrapper() {
+      return construct(Class, arguments, getPrototypeOf(this).constructor);
+    }
+    Wrapper.prototype = Object.create(Class.prototype, {
+      constructor: {
+        value: Wrapper,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    return setPrototypeOf(Wrapper, Class);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _wrapNativeSuper(Class);
+}
+module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 352:
 /*!**********************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-popup/components/uni-popup/popup.js ***!
   \**********************************************************************************************************/
@@ -21412,7 +21143,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 354:
+/***/ 353:
 /*!***************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-popup/components/uni-popup/i18n/index.js ***!
   \***************************************************************************************************************/
@@ -21427,9 +21158,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 355));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 356));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 357));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 354));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 355));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 356));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -21439,7 +21170,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 355:
+/***/ 354:
 /*!**************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-popup/components/uni-popup/i18n/en.json ***!
   \**************************************************************************************************************/
@@ -21450,7 +21181,7 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"cancel\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 356:
+/***/ 355:
 /*!*******************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hans.json ***!
   \*******************************************************************************************************************/
@@ -21461,7 +21192,7 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 357:
+/***/ 356:
 /*!*******************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hant.json ***!
   \*******************************************************************************************************************/
@@ -21473,72 +21204,239 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\
 /***/ }),
 
 /***/ 36:
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
-  \**********************************************************************/
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/isNativeFunction.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-  return self;
+function _isNativeFunction(fn) {
+  return Function.toString.call(fn).indexOf("[native code]") !== -1;
 }
-module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
+module.exports = _isNativeFunction, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
 /***/ 37:
-/*!*********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
-  \*********************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/pages.json?{"type":"origin-pages-json"} ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  "pages": [{
+    "path": "pages/tabbar/goods/goods",
+    "style": {
+      "enablePullDownRefresh": true
     }
-  });
-  Object.defineProperty(subClass, "prototype", {
-    writable: false
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  }, {
+    "path": "pages/tabbar/testPage/testPage",
+    "style": {}
+  }, {
+    "path": "pages/tabbar/publish/publish",
+    "style": {}
+  }, {
+    "path": "pages/tabbar/tabbar-4/tabbar-4",
+    "style": {}
+  }, {
+    "path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
+    "style": {}
+  }, {
+    "path": "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
+    "style": {}
+  }, {
+    "path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
+    "style": {}
+  }, {
+    "path": "pages/test/showData/showData",
+    "style": {
+      "navigationBarTitleText": "",
+      "enablePullDownRefresh": false
+    }
+  }, {
+    "path": "pages/detail/detail",
+    "style": {
+      "navigationBarTitleText": "",
+      "enablePullDownRefresh": false
+    }
+  }, {
+    "path": "pages/tabbar/my/my",
+    "style": {
+      "navigationBarTitleText": "",
+      "enablePullDownRefresh": false
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+    "style": {
+      "navigationBarTitleText": "注销账号"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+    "style": {
+      "navigationBarTitleText": "个人资料"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+    "style": {
+      "navigationBarTitleText": "绑定手机号码"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+    "style": {
+      "navigationBarTitleText": ""
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+    "style": {
+      "navigationBarTitleText": ""
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+    "style": {
+      "navigationBarTitleText": ""
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/login/login-smscode",
+    "style": {
+      "navigationBarTitleText": "手机验证码登录"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/register/register",
+    "style": {
+      "navigationBarTitleText": "注册"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/register/register-by-email",
+    "style": {
+      "navigationBarTitleText": "邮箱验证码注册"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+    "style": {
+      "navigationBarTitleText": "重置密码"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+    "style": {
+      "navigationBarTitleText": "通过邮箱重置密码"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/common/webview/webview",
+    "style": {
+      "enablePullDownRefresh": false,
+      "navigationBarTitleText": ""
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+    "style": {
+      "enablePullDownRefresh": false,
+      "navigationBarTitleText": "修改密码"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/register/register-admin",
+    "style": {
+      "enablePullDownRefresh": false,
+      "navigationBarTitleText": "注册管理员账号"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+    "style": {
+      "enablePullDownRefresh": false,
+      "navigationBarTitleText": "设置密码"
+    }
+  }, {
+    "path": "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
+    "style": {
+      "enablePullDownRefresh": false,
+      "navigationBarTitleText": "实名认证"
+    }
+  }, {
+    "path": "pages/searchPage/searchPage",
+    "style": {
+      "navigationBarTitleText": "",
+      "enablePullDownRefresh": false
+    }
+  }],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "冬栗二手",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+      "van-uploader": "/wxcomponents/vant/uploader/index",
+      "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
+      "van-button": "/wxcomponents/vant/button/index",
+      "van-field": "/wxcomponents/vant/field/index"
+    }
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "backgroundColor": "#333",
+    "color": "#8F8F94",
+    "selectedColor": "#f33e54",
+    "list": [{
+      "pagePath": "pages/tabbar/goods/goods",
+      "iconPath": "static/img/tabbar/home.png",
+      "selectedIconPath": "static/img/tabbar/homeactive.png",
+      "text": "商品"
+    }, {
+      "pagePath": "pages/tabbar/testPage/testPage",
+      "iconPath": "static/img/tabbar/guanzhu.png",
+      "selectedIconPath": "static/img/tabbar/guanzhuactive.png",
+      "text": "测试"
+    }, {
+      "pagePath": "pages/tabbar/publish/publish",
+      "iconPath": "static/img/tabbar/add.png",
+      "selectedIconPath": "static/img/tabbar/addactive.png",
+      "text": "发布"
+    }, {
+      "pagePath": "pages/tabbar/tabbar-4/tabbar-4",
+      "iconPath": "static/img/tabbar/news.png",
+      "selectedIconPath": "static/img/tabbar/newsactive.png",
+      "text": "消息"
+    }, {
+      "pagePath": "pages/tabbar/my/my",
+      "iconPath": "static/img/tabbar/me.png",
+      "selectedIconPath": "static/img/tabbar/meactive.png",
+      "text": "我的"
+    }]
+  }
+};
+exports.default = _default;
 
 /***/ }),
 
 /***/ 38:
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \**************************************************************************/
+/*!*********************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/pages.json?{"type":"stat"} ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 36);
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  } else if (call !== void 0) {
-    throw new TypeError("Derived constructors may only return object or undefined");
-  }
-  return assertThisInitialized(self);
-}
-module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  "appid": "__UNI__D30BB6C"
+};
+exports.default = _default;
 
 /***/ }),
 
-/***/ 386:
+/***/ 385:
 /*!*****************************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/pages/userinfo/cropImage/limeClipper/utils.js ***!
   \*****************************************************************************************************************************/
@@ -21794,23 +21692,6 @@ function imageTouchMoveOfCalcOffset(data, clientXForLeft, clientYForLeft) {
 
 /***/ }),
 
-/***/ 39:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _getPrototypeOf(o);
-}
-module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
 /***/ 4:
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
@@ -21827,48 +21708,7 @@ module.exports = _interopRequireDefault, module.exports.__esModule = true, modul
 
 /***/ }),
 
-/***/ 40:
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ 39);
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
-var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ 41);
-var construct = __webpack_require__(/*! ./construct.js */ 15);
-function _wrapNativeSuper(Class) {
-  var _cache = typeof Map === "function" ? new Map() : undefined;
-  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
-    if (Class === null || !isNativeFunction(Class)) return Class;
-    if (typeof Class !== "function") {
-      throw new TypeError("Super expression must either be null or a function");
-    }
-    if (typeof _cache !== "undefined") {
-      if (_cache.has(Class)) return _cache.get(Class);
-      _cache.set(Class, Wrapper);
-    }
-    function Wrapper() {
-      return construct(Class, arguments, getPrototypeOf(this).constructor);
-    }
-    Wrapper.prototype = Object.create(Class.prototype, {
-      constructor: {
-        value: Wrapper,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    return setPrototypeOf(Wrapper, Class);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _wrapNativeSuper(Class);
-}
-module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 408:
+/***/ 407:
 /*!*************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-forms/components/uni-forms/validate.js ***!
   \*************************************************************************************************************/
@@ -21883,11 +21723,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 31));
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ 37));
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ 38));
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ 39));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 33));
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ 32));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ 33));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ 34));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
@@ -22560,7 +22400,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 409:
+/***/ 408:
 /*!**********************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-forms/components/uni-forms/utils.js ***!
   \**********************************************************************************************************/
@@ -22896,278 +22736,144 @@ exports.isEqual = isEqual;
 
 /***/ }),
 
-/***/ 41:
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/isNativeFunction.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _isNativeFunction(fn) {
-  return Function.toString.call(fn).indexOf("[native code]") !== -1;
-}
-module.exports = _isNativeFunction, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
 /***/ 42:
-/*!**********************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/pages.json?{"type":"origin-pages-json"} ***!
-  \**********************************************************************************************/
+/*!***************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/init.js ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  "pages": [{
-    "path": "pages/tabbar/goods/goods",
-    "style": {
-      "enablePullDownRefresh": true
-    }
-  }, {
-    "path": "pages/tabbar/testPage/testPage",
-    "style": {}
-  }, {
-    "path": "pages/tabbar/publish/publish",
-    "style": {}
-  }, {
-    "path": "pages/tabbar/tabbar-4/tabbar-4",
-    "style": {}
-  }, {
-    "path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
-    "style": {}
-  }, {
-    "path": "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-    "style": {}
-  }, {
-    "path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
-    "style": {}
-  }, {
-    "path": "pages/test/showData/showData",
-    "style": {
-      "navigationBarTitleText": "",
-      "enablePullDownRefresh": false
-    }
-  }, {
-    "path": "pages/detail/detail",
-    "style": {
-      "navigationBarTitleText": "",
-      "enablePullDownRefresh": false
-    }
-  }, {
-    "path": "pages/tabbar/my/my",
-    "style": {
-      "navigationBarTitleText": "",
-      "enablePullDownRefresh": false
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
-    "style": {
-      "navigationBarTitleText": "注销账号"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
-    "style": {
-      "navigationBarTitleText": "个人资料"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
-    "style": {
-      "navigationBarTitleText": "绑定手机号码"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
-    "style": {
-      "navigationBarTitleText": ""
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
-    "style": {
-      "navigationBarTitleText": ""
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/login/login-withpwd",
-    "style": {
-      "navigationBarTitleText": ""
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/login/login-smscode",
-    "style": {
-      "navigationBarTitleText": "手机验证码登录"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/register/register",
-    "style": {
-      "navigationBarTitleText": "注册"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/register/register-by-email",
-    "style": {
-      "navigationBarTitleText": "邮箱验证码注册"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve",
-    "style": {
-      "navigationBarTitleText": "重置密码"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
-    "style": {
-      "navigationBarTitleText": "通过邮箱重置密码"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/common/webview/webview",
-    "style": {
-      "enablePullDownRefresh": false,
-      "navigationBarTitleText": ""
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
-    "style": {
-      "enablePullDownRefresh": false,
-      "navigationBarTitleText": "修改密码"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/register/register-admin",
-    "style": {
-      "enablePullDownRefresh": false,
-      "navigationBarTitleText": "注册管理员账号"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
-    "style": {
-      "enablePullDownRefresh": false,
-      "navigationBarTitleText": "设置密码"
-    }
-  }, {
-    "path": "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
-    "style": {
-      "enablePullDownRefresh": false,
-      "navigationBarTitleText": "实名认证"
-    }
-  }, {
-    "path": "pages/searchPage/searchPage",
-    "style": {
-      "navigationBarTitleText": "",
-      "enablePullDownRefresh": false
-    }
-  }],
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "冬栗二手",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8",
-    "enablePullDownRefresh": true,
-    "usingComponents": {
-      "van-uploader": "/wxcomponents/vant/uploader/index",
-      "van-submit-bar": "/wxcomponents/vant/submit-bar/index",
-      "van-button": "/wxcomponents/vant/button/index",
-      "van-field": "/wxcomponents/vant/field/index"
-    }
-  },
-  "tabBar": {
-    "borderStyle": "black",
-    "backgroundColor": "#333",
-    "color": "#8F8F94",
-    "selectedColor": "#f33e54",
-    "list": [{
-      "pagePath": "pages/tabbar/goods/goods",
-      "iconPath": "static/img/tabbar/home.png",
-      "selectedIconPath": "static/img/tabbar/homeactive.png",
-      "text": "商品"
-    }, {
-      "pagePath": "pages/tabbar/testPage/testPage",
-      "iconPath": "static/img/tabbar/guanzhu.png",
-      "selectedIconPath": "static/img/tabbar/guanzhuactive.png",
-      "text": "测试"
-    }, {
-      "pagePath": "pages/tabbar/publish/publish",
-      "iconPath": "static/img/tabbar/add.png",
-      "selectedIconPath": "static/img/tabbar/addactive.png",
-      "text": "发布"
-    }, {
-      "pagePath": "pages/tabbar/tabbar-4/tabbar-4",
-      "iconPath": "static/img/tabbar/news.png",
-      "selectedIconPath": "static/img/tabbar/newsactive.png",
-      "text": "消息"
-    }, {
-      "pagePath": "pages/tabbar/my/my",
-      "iconPath": "static/img/tabbar/me.png",
-      "selectedIconPath": "static/img/tabbar/meactive.png",
-      "text": "我的"
-    }]
-  }
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 43:
-/*!*********************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/pages.json?{"type":"stat"} ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  "appid": "__UNI__D30BB6C"
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 438:
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
-  \*************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
+/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 439));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 440));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 441));
-var _default = {
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
-};
 exports.default = _default;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+var _config = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/config.js */ 43));
+// 导入配置
+
+// uni-id的云对象
+var uniIdCo = uniCloud.importObject('uni-id-co', {
+  customUI: true
+});
+// 用户配置的登录方式、是否打开调试模式
+var loginTypes = _config.default.loginTypes,
+  debug = _config.default.debug;
+function _default() {
+  return _ref.apply(this, arguments);
+}
+function _ref() {
+  _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+    var _yield$uniIdCo$getSup, supportedLoginType, data, list, db, onDBError;
+    return _regenerator.default.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            onDBError = function _onDBError(_ref2) {
+              var code = _ref2.code,
+                message = _ref2.message;
+            } // console.error('onDBError', {code,message});
+            ;
+            if (!debug) {
+              _context2.next = 10;
+              break;
+            }
+            _context2.next = 4;
+            return uniIdCo.getSupportedLoginType();
+          case 4:
+            _yield$uniIdCo$getSup = _context2.sent;
+            supportedLoginType = _yield$uniIdCo$getSup.supportedLoginType;
+            console.log('supportedLoginType: ' + JSON.stringify(supportedLoginType));
+            // 登录方式，服务端和客户端的映射关系
+            data = {
+              smsCode: 'mobile-code',
+              univerify: 'univerify',
+              username: 'username-password',
+              weixin: 'weixin',
+              qq: 'qq',
+              xiaomi: 'xiaomi',
+              sinaweibo: 'sinaweibo',
+              taobao: 'taobao',
+              facebook: 'facebook',
+              google: 'google',
+              alipay: 'alipay',
+              apple: 'apple',
+              weixinMobile: 'weixin'
+            }; // 遍历客户端配置的登录方式，与服务端比对。并在错误时抛出错误提示
+            list = loginTypes.filter(function (type) {
+              return !supportedLoginType.includes(data[type]);
+            });
+            if (list.length) {
+              console.error("\u9519\u8BEF\uFF1A\u524D\u7AEF\u542F\u7528\u7684\u767B\u5F55\u65B9\u5F0F:".concat(list.join('，'), ";\u6CA1\u6709\u5728\u670D\u52A1\u7AEF\u5B8C\u6210\u914D\u7F6E\u3002\u914D\u7F6E\u6587\u4EF6\u8DEF\u5F84\uFF1A\"/uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center/uni-id/config.json\""));
+            }
+          case 10:
+            // 3. 绑定clientDB错误事件
+            // clientDB对象
+            db = uniCloud.database();
+            db.on('error', onDBError);
+            // clientDB的错误提示
+
+            // 解绑clientDB错误事件
+            // db.off('error', onDBError)
+
+            // 4. 同步客户端push_clientid至device表
+            if (uniCloud.onRefreshToken) {
+              uniCloud.onRefreshToken(function () {
+                // console.log('onRefreshToken');
+                if (uni.getPushClientId) {
+                  uni.getPushClientId({
+                    success: function () {
+                      var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(e) {
+                        var pushClientId, res;
+                        return _regenerator.default.wrap(function _callee$(_context) {
+                          while (1) {
+                            switch (_context.prev = _context.next) {
+                              case 0:
+                                // console.log(e)
+                                pushClientId = e.cid; // console.log(pushClientId);
+                                _context.next = 3;
+                                return uniIdCo.setPushCid({
+                                  pushClientId: pushClientId
+                                });
+                              case 3:
+                                res = _context.sent;
+                              case 4:
+                              case "end":
+                                return _context.stop();
+                            }
+                          }
+                        }, _callee);
+                      }));
+                      function success(_x) {
+                        return _success.apply(this, arguments);
+                      }
+                      return success;
+                    }(),
+                    fail: function fail(e) {
+                      // console.log(e)
+                    }
+                  });
+                }
+              });
+            }
+          case 13:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _ref.apply(this, arguments);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 439:
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
-  \************************************************************************************************************************/
-/*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"Search enter content\"}");
-
-/***/ }),
-
-/***/ 44:
+/***/ 43:
 /*!*****************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-id-pages/config.js ***!
   \*****************************************************************************************/
@@ -23244,7 +22950,45 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 440:
+/***/ 437:
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 438));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 439));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 440));
+var _default = {
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 438:
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
+  \************************************************************************************************************************/
+/*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"Search enter content\"}");
+
+/***/ }),
+
+/***/ 439:
 /*!*****************************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \*****************************************************************************************************************************/
@@ -23255,7 +22999,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-
 
 /***/ }),
 
-/***/ 441:
+/***/ 440:
 /*!*****************************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \*****************************************************************************************************************************/
@@ -23266,7 +23010,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-
 
 /***/ }),
 
-/***/ 449:
+/***/ 448:
 /*!**********************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \**********************************************************************************************************/
@@ -24288,7 +24032,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 47:
+/***/ 46:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
@@ -24420,7 +24164,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 48:
+/***/ 47:
 /*!*********************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/store/store.js ***!
   \*********************************************************************/
@@ -24435,7 +24179,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 49));
+var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 48));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
 // // 创建store实例对象
 // import {action, observable} from 'mobx-miniprogram'
@@ -24463,7 +24207,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 49:
+/***/ 48:
 /*!**************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vuex3/dist/vuex.common.js ***!
   \**************************************************************************************/
@@ -25720,7 +25464,7 @@ module.exports = index_cjs;
 
 /***/ }),
 
-/***/ 490:
+/***/ 489:
 /*!******************************************************************************************************************************!*\
   !*** C:/Users/64170/Documents/HBuilderProjects/vue2/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \******************************************************************************************************************************/

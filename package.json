@@ -58,6 +58,8 @@
 		}
 	},
 	"dependencies": {
+		"@dcloudio/uni-cloud": "^3.0.0-alpha-3000020210521002",
+		"@dcloudio/uni-i18n": "^2.0.2-3080720230703001",
 		"mobx-miniprogram": "^4.13.2",
 		"mobx-miniprogram-bindings": "^1.2.1",
 		"vant": "^2.12.54",
@@ -68,7 +70,8 @@
 		"@vue/cli-plugin-unit-jest": "^5.0.8",
 		"@vue/test-utils": "^2.4.0",
 		"babel-plugin-import": "^1.13.6",
-		"jest": "^29.6.1"
+		"jest": "^29.6.1",
+		"miniprogram-automator": "^0.5.1"
 	},
 	"scripts": {
 		"test": "jest"

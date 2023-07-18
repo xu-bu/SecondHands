@@ -10,7 +10,7 @@
 
 // 下面示例查询uni-id-users表的所有数据
 //删除所有指定条件的记录
-// db.collection('opendb-mall-goods').where('goods_price==1').remove()
+db.collection('opendb-mall-goods').where('goods_price==10').remove()
 // db.collection('opendb-mall-goods').where('goods_price==10').get()
 // db.collection('opendb-mall-goods').doc("93e4b6a064090080038a43df24e6a409").get()
-db.collection('opendb-mall-goods').count()
+// db.collection('opendb-mall-goods').count()

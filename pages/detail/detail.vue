@@ -18,8 +18,7 @@
 				￥{{goodsinfo.goods_price}}
 			</view>
 			<!-- 联系信息区域 -->
-			<view class="contact">联系微信号：{{goodsinfo.goods_price}}
-			<!-- <button @click="copy">复制</button> -->
+			<view class="contact">联系微信号：{{goodsinfo.seller_wechat}}
 			<van-button @click="copy" type="primary" size="mini" color="linear-gradient(to right, #4bb0ff, #6149f6)">复制</van-button>
 			</view>
 			<!-- 商品描述 -->
@@ -34,17 +33,31 @@
 	export default {
 		data() {
 			return {
-				val:"test",
 				goodsinfo:""
 			}
 		},
 		methods: {
 			onLoad(option) {
-				console.log(option.id)
-				console.log(option.title)
 				this.getGoodsInfo(option.id)
 			},
 			copy() {
+				uni.setClipboardData({
+					data: this.goodsinfo.seller_wechat,
+					success() {
+						uni.showToast({
+							title: '复制成功',
+							icon: 'success',
+							duration: 2000
+						})
+					},
+					fail() {
+						uni.showToast({
+							title: '复制失败',
+							icon: 'none',
+							duration: 2000
+						})
+					}
+				})
 			},
 
 			async getGoodsInfo(id) {

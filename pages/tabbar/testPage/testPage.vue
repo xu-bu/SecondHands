@@ -8,10 +8,7 @@
 	export default {
 		data() {
 			return {
-				item: {
-					"name": "",
-					"phone": ""
-				}
+				contact:"contact"
 			}
 		},
 		computed: {
@@ -20,33 +17,19 @@
 			}
 		},
 		methods: {
-			async callco() {
-				console.log("test")
-				const co1 = uniCloud.importObject("co")
-				let res = await co1.test("test from client")
-				uni.showModal({
-					content: JSON.stringify(res.data),
-					showCancel: false
-				})
+			onload(){
+
 			},
 			test() {
-				uni.setClipboardData({
-					data: 'Yo',
-					success() {
-						uni.showToast({
-							title: '复制成功',
-							icon: 'success',
-							duration: 2000
-						})
-					},
-					fail() {
-						uni.showToast({
-							title: '复制失败',
-							icon: 'none',
-							duration: 2000
-						})
-					}
-				})
+				console.log("test")
+				uni.login({
+				  provider: 'weixin', //使用微信登录
+				  success: function (loginRes) {
+					  uni.showModal({
+					  	content:loginRes.authResult
+					  })
+				  }
+				});
 			}
 		}
 	}
