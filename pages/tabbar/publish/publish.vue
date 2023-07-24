@@ -41,7 +41,7 @@
 				title: "",
 				price: 0,
 				content: "",
-				contact:"",
+				contact: "",
 				disable: true,
 				fileList: [],
 				postId: "",
@@ -55,6 +55,32 @@
 				const pages = getCurrentPages()
 				const perpage = pages[pages.length - 1]
 				perpage.onLoad()
+				try {
+					const value = uni.getStorageSync('loginStatus');
+					if (!value) {
+						this.redirectToVerify()
+					} 
+				} catch (e) {
+					this.redirectToVerify()
+				}
+			},
+			redirectToVerify() {
+				uni.showModal({
+					content: "请验证校园邮箱后再尝试发布二手物品",
+					showCancel: false,
+					success: function(res) {
+						if (res.confirm) {
+							uni.redirectTo({
+								url: "/pages/verify/verify",
+								success: (res) => {
+									let page = getCurrentPages().pop();
+									if (page == undefined || page == null) return;
+									page.onLoad();
+								}
+							})
+						}
+					},
+				})
 			},
 			onTitle(e) {
 				this.title = e.detail
@@ -76,7 +102,7 @@
 					success: function(res) {
 						if (res.confirm) {
 							uni.switchTab({
-								url: "/pages/tabbar/goods/goods",
+								url: "/pages/tabbar/index/index",
 								success: (res) => {
 									let page = getCurrentPages().pop();
 									if (page == undefined || page == null) return;
@@ -119,7 +145,7 @@
 								goods_price: this.price,
 								goods_banner_imgs: url,
 								goods_thumb: url[0],
-								seller_wechat:this.contact
+								seller_wechat: this.contact
 							})
 						} catch (e) {
 							this.backToIndex()

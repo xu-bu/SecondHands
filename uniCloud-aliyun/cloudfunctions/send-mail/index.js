@@ -9,16 +9,11 @@ try {
 
 exports.main = async (event, context) => {
 	let res = { code: 0, msg: "" };
-
 	let {
 		email="", // 前端接收邮箱
 		type = "bind", // 前端接收验证码类型（如: login register bind unbind）
 	} = event;
-	
-	//判断是否是利兹大学邮箱
-	
 
-	// 支持QQ 163 等主流邮箱
 
 	let emailConfig = {
 		"host": "smtp.gmail.com",

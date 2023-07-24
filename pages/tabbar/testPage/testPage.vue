@@ -1,45 +1,38 @@
 <template>
-	<button @click="test">test</button>
-
+	<div>
+		<button @click="logout">logout</button>
+		<button @click="test">test</button>
+		<button @click="login">go to login</button>
+	</div>
 </template>
+
 
 
 <script>
 	export default {
 		data() {
 			return {
-				code: ""
-			}
-		},
-		computed: {
-			where() {
-				return `${new RegExp(this.searchVal, 'i')}.test(name)` // 使用计算属性得到完整where
+				code: "",
+				nodemailer: "",
 			}
 		},
 		methods: {
-			onload() {
-
+			async test() {
+				uni.redirectTo({
+					url: "/pages/tabbar/profile/profile"
+				})
 			},
-			test() {
-				console.log("test")
-				uni.login({
-					provider: 'weixin',
-					success: function(loginRes) {
-						console.log(loginRes.code);
-						let APPID = "wx983fb58e4689ec79"
-						let secret = "65e839cb3a6ed276c0c07564c3153a79"
-						let url = 'https://api.weixin.qq.com/sns/jscode2session?appid=' + APPID + '&secret=' +
-							secret + '&js_code=' + loginRes.code + '&grant_type=authorization_code'
-						console.log(url)
-						uni.request({
-							url: url, // 请求路径
-							success: result => {
-								uni.showModal({
-									content:result.data.openid
-								})
-							},
-						});
-					}
+			logout() {
+				try {
+					uni.setStorageSync('loginStatus', false);
+					console.log("current status: false")
+				} catch (e) {
+					console.log(e)
+				}
+			},
+			login() {
+				uni.redirectTo({
+					url: "/pages/login/login"
 				})
 			}
 		}
@@ -47,5 +40,15 @@
 </script>
 
 <style>
+	view {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* Optional, to center align the buttons horizontally */
+	}
 
+	button {
+		margin: 10px 0;
+		/* Add some margin between the buttons */
+	}
 </style>

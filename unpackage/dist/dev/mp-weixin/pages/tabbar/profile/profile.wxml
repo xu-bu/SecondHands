@@ -1,0 +1,1 @@
+<van-cell-group vue-id="3b83b7ca-1" data-com-type="wx" bind:__l="__l" vue-slots="{{['default']}}"><van-cell vue-id="{{('3b83b7ca-2')+','+('3b83b7ca-1')}}" title="单元格" value="内容" data-com-type="wx" bind:__l="__l"></van-cell><van-cell vue-id="{{('3b83b7ca-3')+','+('3b83b7ca-1')}}" title="单元格" value="内容" label="描述信息" data-com-type="wx" bind:__l="__l"></van-cell></van-cell-group>

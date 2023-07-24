@@ -1,2 +1,2 @@
-require('../../style/base.css');
-require('../index.css');
+require("../../style/base.css");
+require("../index.css");

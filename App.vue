@@ -1,9 +1,10 @@
 <script>
 	import uniIdPageInit from '@/uni_modules/uni-id-pages/init.js';
+	// const  nodemailer=require("./node_modules/nodemailer/lib/nodemailer.js")
 	export default {
 			onLaunch: async function() {
 				console.log('App Launch')
-				await uniIdPageInit()
+				// this.nodemailer=nodemailer
 			},
 			onLaunch: function() {
 				console.log('App Launch');

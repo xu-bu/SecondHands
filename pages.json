@@ -2,6 +2,10 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/tabbar/index/index",
+			"style": {}
+		},
+		{
 			"path": "pages/tabbar/goods/goods",
 			"style": {
 				// "navigationBarTitleText": "page.json修改导航栏",
@@ -16,10 +20,7 @@
 			"path": "pages/tabbar/publish/publish",
 			"style": {}
 		},
-		{
-			"path": "pages/tabbar/tabbar-4/tabbar-4",
-			"style": {}
-		},
+
 		{
 			"path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
 			"style": {}
@@ -31,7 +32,7 @@
 		{
 			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
 			"style": {}
-		}, 
+		},
 		{
 			"path": "pages/test/showData/showData",
 			"style": {
@@ -46,100 +47,143 @@
 				"enablePullDownRefresh": false
 			}
 
-		}, {
-			"path": "pages/tabbar/my/my",
+		},
+
+		{
+			"path": "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+			"style": {
+				"navigationBarTitleText": "注销账号"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+			"style": {
+				"navigationBarTitleText": "个人资料"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+			"style": {
+				"navigationBarTitleText": "绑定手机号码"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/login/login-withpwd",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/login/login-smscode",
+			"style": {
+				"navigationBarTitleText": "手机验证码登录"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/register/register-by-email",
+			"style": {
+				"navigationBarTitleText": "邮箱验证码注册"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+			"style": {
+				"navigationBarTitleText": "重置密码"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+			"style": {
+				"navigationBarTitleText": "通过邮箱重置密码"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/common/webview/webview",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/register/register-admin",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "注册管理员账号"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "设置密码"
+			}
+		},
+		{
+			"path": "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "实名认证"
+			}
+		},
+		{
+			"path": "pages/searchPage/searchPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/verify/verify",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+		,
+		{
+			"path": "pages/tabbar/feedback/feedback",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 
 		}, {
-			"path": "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+			"path": "pages/login/login",
 			"style": {
-				"navigationBarTitleText": "注销账号"
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
+
 		}, {
-			"path": "uni_modules/uni-id-pages/pages/userinfo/userinfo",
-			"style": {
-				"navigationBarTitleText": "个人资料"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
-			"style": {
-				"navigationBarTitleText": "绑定手机号码"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/login/login-withpwd",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/login/login-smscode",
-			"style": {
-				"navigationBarTitleText": "手机验证码登录"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/register/register",
-			"style": {
-				"navigationBarTitleText": "注册"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/register/register-by-email",
-			"style": {
-				"navigationBarTitleText": "邮箱验证码注册"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/retrieve/retrieve",
-			"style": {
-				"navigationBarTitleText": "重置密码"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
-			"style": {
-				"navigationBarTitleText": "通过邮箱重置密码"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/common/webview/webview",
-			"style": {
-				"enablePullDownRefresh": false,
-				"navigationBarTitleText": ""
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
-			"style": {
-				"enablePullDownRefresh": false,
-				"navigationBarTitleText": "修改密码"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/register/register-admin",
-			"style": {
-				"enablePullDownRefresh": false,
-				"navigationBarTitleText": "注册管理员账号"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
-			"style": {
-				"enablePullDownRefresh": false,
-				"navigationBarTitleText": "设置密码"
-			}
-		}, {
-			"path": "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
-			"style": {
-				"enablePullDownRefresh": false,
-				"navigationBarTitleText": "实名认证"
-			}
-		}, {
-			"path": "pages/searchPage/searchPage",
+			"path": "pages/tabbar/profile/profile",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
@@ -157,7 +201,9 @@
 			"van-uploader": "/wxcomponents/vant/uploader/index",
 			"van-submit-bar": "/wxcomponents/vant/submit-bar/index",
 			"van-button": "/wxcomponents/vant/button/index",
-			"van-field": "/wxcomponents/vant/field/index"
+			"van-field": "/wxcomponents/vant/field/index",
+			"van-cell": "/wxcomponents/vant/cell/index",
+			"van-cell-group": "/wxcomponents/vant/cell-group/index"
 		}
 		// "easycom": {
 		//   "autoscan": true,
@@ -171,33 +217,31 @@
 		"color": "#8F8F94",
 		"selectedColor": "#f33e54",
 		"list": [{
+				"pagePath": "pages/tabbar/index/index",
+				"iconPath": "static/img/tabbar/home.png",
+				"selectedIconPath": "static/img/tabbar/homeactive.png",
+				"text": "主页"
+			}, {
+
 				"pagePath": "pages/tabbar/goods/goods",
 				"iconPath": "static/img/tabbar/home.png",
 				"selectedIconPath": "static/img/tabbar/homeactive.png",
 
 				"text": "商品"
+			},
+			{
+				"pagePath": "pages/tabbar/publish/publish",
+				"iconPath": "static/img/tabbar/add.png",
+				"selectedIconPath": "static/img/tabbar/addactive.png",
+				"text": "发布"
 			}, {
 				"pagePath": "pages/tabbar/testPage/testPage",
 				"iconPath": "static/img/tabbar/guanzhu.png",
 				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
 				"text": "测试"
 			},
-
 			{
-				"pagePath": "pages/tabbar/publish/publish",
-				"iconPath": "static/img/tabbar/add.png",
-				"selectedIconPath": "static/img/tabbar/addactive.png",
-				"text": "发布"
-			},
-
-			{
-				"pagePath": "pages/tabbar/tabbar-4/tabbar-4",
-				"iconPath": "static/img/tabbar/news.png",
-				"selectedIconPath": "static/img/tabbar/newsactive.png",
-				"text": "消息"
-			},
-			{
-				"pagePath": "pages/tabbar/my/my",
+				"pagePath": "pages/tabbar/profile/profile",
 				"iconPath": "static/img/tabbar/me.png",
 				"selectedIconPath": "static/img/tabbar/meactive.png",
 				"text": "我的"

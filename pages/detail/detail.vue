@@ -18,8 +18,9 @@
 				￥{{goodsinfo.goods_price}}
 			</view>
 			<!-- 联系信息区域 -->
-			<view class="contact">联系微信号：{{goodsinfo.seller_wechat}}
-			<van-button @click="copy" type="primary" size="mini" color="linear-gradient(to right, #4bb0ff, #6149f6)">复制</van-button>
+			<view class="contact">联系微信号：(验证邮箱后可复制)
+				<van-button @click="copy" type="primary" size="mini"
+					color="linear-gradient(to right, #4bb0ff, #6149f6)">复制</van-button>
 			</view>
 			<!-- 商品描述 -->
 			<view class="goods_description">
@@ -33,14 +34,35 @@
 	export default {
 		data() {
 			return {
-				goodsinfo:""
+				goodsinfo: ""
 			}
 		},
 		methods: {
 			onLoad(option) {
 				this.getGoodsInfo(option.id)
 			},
+			redirectToVerify() {
+				uni.showModal({
+					content: "请验证校园邮箱后再尝试获取卖家微信号",
+					showCancel: false,
+					success: function(res) {
+						if (res.confirm) {
+							uni.redirectTo({
+								url: "/pages/verify/verify",
+							})
+						}
+					},
+				})
+			},
 			copy() {
+				try {
+					const value = uni.getStorageSync('loginStatus');
+					if (!value) {
+						this.redirectToVerify()
+					}
+				} catch (e) {
+					this.redirectToVerify()
+				}
 				uni.setClipboardData({
 					data: this.goodsinfo.seller_wechat,
 					success() {

@@ -1,0 +1,12 @@
+
+view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* Optional, to center align the buttons horizontally */
+}
+button {
+	margin: 10px 0;
+	/* Add some margin between the buttons */
+}
+

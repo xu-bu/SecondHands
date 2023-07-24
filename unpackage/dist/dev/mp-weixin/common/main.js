@@ -107,6 +107,7 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 var _init = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/uni-id-pages/init.js */ 42));
 var _onLaunch$onLaunch$on;
+// const  nodemailer=require("./node_modules/nodemailer/lib/nodemailer.js")
 var _default = (_onLaunch$onLaunch$on = {
   onLaunch: function () {
     var _onLaunch = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
@@ -115,9 +116,8 @@ var _default = (_onLaunch$onLaunch$on = {
           switch (_context.prev = _context.next) {
             case 0:
               console.log('App Launch');
-              _context.next = 3;
-              return (0, _init.default)();
-            case 3:
+              // this.nodemailer=nodemailer
+            case 1:
             case "end":
               return _context.stop();
           }
