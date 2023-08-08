@@ -74,7 +74,7 @@
 				}, 1000);
 			},
 			// 发送验证码
-			onSendCode() {
+			async onSendCode() {
 				if (this.disable) {
 					return
 				}
@@ -92,6 +92,35 @@
 					});
 					return;
 				}
+				uni.showLoading({
+					title:"正在检查邮箱"
+				})
+				let res = await uniCloud.callFunction({
+					name: "searchField",
+					data: {
+						"table": "uni-id-users",
+						"keyWord": this.email,
+						"field": "email"
+					}
+				})
+				console.log(this.email)
+				console.log(res)
+				if (res.result == "error") {
+					uni.hideLoading()
+					uni.showToast({
+						title: '注册出错，请稍后再试',
+						icon: 'none'
+					});
+					return
+				} else if (res.result>0) {
+					uni.hideLoading()
+					uni.showToast({
+						title: '邮箱已被注册',
+						icon: 'none'
+					});
+					return
+				}
+				uni.hideLoading()
 				this.disable = true;
 				this.getCodeState();
 				uniCloud.callFunction({
@@ -162,7 +191,8 @@
 				}
 				return true
 			},
-			async isUsernameDuplicate() {
+			async isUsed() {
+				// 检查用户名和邮箱是否已被使用
 				// -1代表错误，0代表重复，1代表合法
 				let res = await uniCloud.callFunction({
 					name: "searchField",
@@ -172,13 +202,12 @@
 						"field": "username"
 					}
 				})
-				if (res == "error") {
+				if (res.result == "error") {
 					return -1
-				} else if (res.affectedDocs == 0) {
-					return 1
-				} else {
+				} else if (res.affectedDocs > 0) {
 					return 0
 				}
+				return 1
 			},
 			async onVerify() {
 				if (!this.isInputValid()) {
@@ -187,19 +216,19 @@
 				uni.showLoading({
 					title: '注册中'
 				})
-				let isUsernameDuplicate = await this.isUsernameDuplicate()
-				console.log(isUsernameDuplicate)
-				if (isUsernameDuplicate == -1) {
+				let isUsed = await this.isUsed()
+				console.log("isUsed status: ",isUsed)
+				if (isUsed == -1) {
 					uni.hideLoading()
 					uni.showToast({
 						title: "注册出错，请重试",
 						icon:"none"
 					})
 					return
-				} else if (isUsernameDuplicate == 0) {
+				} else if ( isUsed==0) {
 					uni.hideLoading()
 					uni.showToast({
-						title: "用户名已被注册，请更换",
+						title: "用户名或邮箱已被注册，请更换",
 						icon:"none"
 					})
 					return
@@ -211,18 +240,12 @@
 							data: {
 								"username": this.username,
 								"password": this.md5Hash(this.password),
+								"email":this.email,
 							}
 						}
 					})
-					if (res) {
+					if (res.success) {
 						uni.hideLoading()
-						uni.setStorage({
-							key: 'loginStatus',
-							data: true,
-							success: function() {
-								console.log('set local storage successully');
-							}
-						});
 						uni.showModal({
 							title: "提示",
 							content: "注册成功！",

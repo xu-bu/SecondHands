@@ -155,14 +155,47 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      code: "",
-      nodemailer: ""
+      text: ""
     };
   },
   methods: {
+    onload: function onload() {},
+    showPopup: function showPopup() {
+      var _this = this;
+      uni.showModal({
+        title: '输入框',
+        // content: '请输入内容：',
+        editable: true,
+        placeholderText: '请输入...',
+        showCancel: true,
+        cancelText: '取消',
+        confirmText: '确定',
+        success: function success(res) {
+          if (res.confirm) {
+            console.log(res.content);
+          } else if (res.cancel) {
+            console.log('用户点击了取消');
+          }
+        }
+      });
+    },
+    onClose: function onClose() {
+      this.show = false;
+    },
     test: function test() {
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
         return _regenerator.default.wrap(function _callee$(_context) {
@@ -170,7 +203,7 @@ var _default = {
             switch (_context.prev = _context.next) {
               case 0:
                 uni.redirectTo({
-                  url: "/pages/tabbar/profile/profile"
+                  url: "/pages/tabbar/NFT/NFT"
                 });
               case 1:
               case "end":

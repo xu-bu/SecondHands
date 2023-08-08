@@ -1,0 +1,12 @@
+
+.container {
+	width: 100%;
+}
+
+/* 自定义商品标题和描述信息的字体大小 */
+.van-card__title,
+.van-card__desc {
+	font-size: 16px;
+	/* 自定义字体大小，根据需要调整 */
+}
+

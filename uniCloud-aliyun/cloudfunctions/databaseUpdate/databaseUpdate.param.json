@@ -1,6 +1,8 @@
 {
-	"table": "feedback",
+	"table": "uni-id-users",
+	"doc":"64bfa0cd55b3378257f2fb58"
 	"data": {
-		"content": "test feedback"
+		privateKey: "test fprivateKey",
+		score:10
 	}
 }

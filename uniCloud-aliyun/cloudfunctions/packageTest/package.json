@@ -1,0 +1,9 @@
+{
+  "name": "packageTest",
+  "dependencies": {
+    "ethers": "^6.6.7"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

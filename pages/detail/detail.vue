@@ -5,6 +5,10 @@
 		<view class="goods_name">
 			{{goodsinfo.name}}
 		</view>
+		<!-- 发布者用户名 -->
+		<view>
+			{{goodsinfo.username}}
+		</view>
 		<!-- 轮播图区域 -->
 		<swiper :indicator-dots="true" circular="true">
 			<swiper-item v-for="(item,i) in goodsinfo.goods_banner_imgs" :key="i">

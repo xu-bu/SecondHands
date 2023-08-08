@@ -169,7 +169,7 @@
 
 		,
 		{
-			"path": "pages/tabbar/feedback/feedback",
+			"path": "pages/feedback/feedback",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
@@ -189,6 +189,13 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/tabbar/NFT/NFT",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
@@ -203,7 +210,11 @@
 			"van-button": "/wxcomponents/vant/button/index",
 			"van-field": "/wxcomponents/vant/field/index",
 			"van-cell": "/wxcomponents/vant/cell/index",
-			"van-cell-group": "/wxcomponents/vant/cell-group/index"
+			"van-cell-group": "/wxcomponents/vant/cell-group/index",
+			"van-card": "/wxcomponents/vant/card/index",
+			"van-grid": "/wxcomponents/vant/grid/index",
+			"van-grid-item": "/wxcomponents/vant/grid-item/index",
+			"van-popup": "/wxcomponents/vant/popup/index"
 		}
 		// "easycom": {
 		//   "autoscan": true,

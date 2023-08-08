@@ -35,16 +35,20 @@
 				return hash;
 			},
 			async login() {
+				uni.showLoading({
+					title:"登录中"
+				})
 				let res = await uniCloud.callFunction({
 					name: "searchField",
 					data: {
 						"table": "uni-id-users",
-						"keyWord":this.username,
+						"keyWord": this.username,
 						"field": "username"
 					}
 				})
 				console.log(res)
 				if (res == "error") {
+					uni.hideLoading()
 					uni.showToast({
 						title: "登录出错，请重试",
 						icon: "none"
@@ -53,6 +57,7 @@
 					this.password = ""
 					return
 				} else if (res.result.affectedDocs == 0) {
+					uni.hideLoading()
 					uni.showToast({
 						title: "您输入的用户名不存在，请重试",
 						icon: "none"
@@ -70,8 +75,29 @@
 						}
 					})
 					console.log(res)
+					let email = res.result.data[0].email
+					console.log(email)
 					let password = res.result.data[0].password
+					res = await uniCloud.callFunction({
+						name: "searchField",
+						data: {
+							"table": "user-black-list",
+							"keyWord": email,
+							"field": "email"
+						}
+					})
+					if (res.result != 0) {
+						uni.hideLoading()
+						uni.showToast({
+							title: "您的账户已被停用",
+							icon: "none"
+						})
+						this.username = ""
+						this.password = ""
+						return
+					}
 					if (password != this.md5Hash(this.password)) {
+						uni.hideLoading()
 						uni.showToast({
 							title: "密码错误",
 							icon: "none"
@@ -81,7 +107,27 @@
 						return
 					} else {
 						uni.setStorageSync("loginStatus", true)
-						console.log("log in successfully")
+						uni.setStorageSync("username", this.username)
+						const db=uniCloud.database()
+						let res=await uniCloud.callFunction({
+							name:"searchField",
+							data:{
+								table:"uni-id-users",
+								keyWord: this.username,
+								field: 'username'
+							}
+						})
+						const doc=res.result._id
+						console.log(doc)
+						res=await uniCloud.callFunction({
+							name:"getScore",
+							data:{"doc":doc}
+						})
+						console.log("score is ",res.result)
+						uni.setStorageSync("score", res.result)
+						let name = uni.getStorageSync("username")
+						console.log("log in successfully,username: ", name)
+						uni.hideLoading()
 						uni.switchTab({
 							url: "/pages/tabbar/profile/profile"
 						})

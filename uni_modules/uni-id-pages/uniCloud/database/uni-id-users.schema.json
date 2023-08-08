@@ -86,8 +86,8 @@
 			"title": "邮箱",
 			"trim": "both",
 			"permission": {
-				"read": "doc._id == auth.uid || 'READ_UNI_ID_USERS' in auth.permission",
-				"write": "'CREATE_UNI_ID_USERS' in auth.permission || 'UPDATE_UNI_ID_USERS' in auth.permission"
+				"read": true,
+				"write": true
 			}
 		},
 		"email_confirmed": {
@@ -224,6 +224,15 @@
 				"write": false
 			}
 		},
+		"privateKey": {
+			"bsonType": "password",
+			"description": "用户区块链私钥",
+			"title": "私钥",
+			"permission": {
+				"read": true,
+				"write": true
+			}
+		},
 		"realname_auth": {
 			"bsonType": "object",
 			"description": "实名认证信息",
@@ -336,8 +345,8 @@
 			"bsonType": "int",
 			"description": "用户积分，积分变更记录可参考：uni-id-scores表定义",
 			"permission": {
-				"read": "doc._id == auth.uid || 'READ_UNI_ID_USERS' in auth.permission",
-				"write": "'CREATE_UNI_ID_USERS' in auth.permission || 'UPDATE_UNI_ID_USERS' in auth.permission"
+				"read": true,
+				"write": true
 			}
 		},
 		"status": {

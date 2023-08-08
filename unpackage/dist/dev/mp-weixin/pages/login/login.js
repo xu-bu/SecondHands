@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -184,12 +184,15 @@ var _default = {
     login: function login() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var res, password;
+        var res, email, password, db, _res, doc, name;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                uni.showLoading({
+                  title: "登录中"
+                });
+                _context.next = 3;
                 return uniCloud.callFunction({
                   name: "searchField",
                   data: {
@@ -198,13 +201,14 @@ var _default = {
                     "field": "username"
                   }
                 });
-              case 2:
+              case 3:
                 res = _context.sent;
                 console.log(res);
                 if (!(res == "error")) {
-                  _context.next = 11;
+                  _context.next = 13;
                   break;
                 }
+                uni.hideLoading();
                 uni.showToast({
                   title: "登录出错，请重试",
                   icon: "none"
@@ -212,11 +216,12 @@ var _default = {
                 _this.username = "";
                 _this.password = "";
                 return _context.abrupt("return");
-              case 11:
+              case 13:
                 if (!(res.result.affectedDocs == 0)) {
-                  _context.next = 18;
+                  _context.next = 21;
                   break;
                 }
+                uni.hideLoading();
                 uni.showToast({
                   title: "您输入的用户名不存在，请重试",
                   icon: "none"
@@ -224,8 +229,8 @@ var _default = {
                 _this.username = "";
                 _this.password = "";
                 return _context.abrupt("return");
-              case 18:
-                _context.next = 20;
+              case 21:
+                _context.next = 23;
                 return uniCloud.callFunction({
                   name: "readField",
                   data: {
@@ -234,14 +239,41 @@ var _default = {
                     "field": "username"
                   }
                 });
-              case 20:
+              case 23:
                 res = _context.sent;
                 console.log(res);
+                email = res.result.data[0].email;
+                console.log(email);
                 password = res.result.data[0].password;
-                if (!(password != _this.md5Hash(_this.password))) {
-                  _context.next = 30;
+                _context.next = 30;
+                return uniCloud.callFunction({
+                  name: "searchField",
+                  data: {
+                    "table": "user-black-list",
+                    "keyWord": email,
+                    "field": "email"
+                  }
+                });
+              case 30:
+                res = _context.sent;
+                if (!(res.result != 0)) {
+                  _context.next = 37;
                   break;
                 }
+                uni.hideLoading();
+                uni.showToast({
+                  title: "您的账户已被停用",
+                  icon: "none"
+                });
+                _this.username = "";
+                _this.password = "";
+                return _context.abrupt("return");
+              case 37:
+                if (!(password != _this.md5Hash(_this.password))) {
+                  _context.next = 45;
+                  break;
+                }
+                uni.hideLoading();
                 uni.showToast({
                   title: "密码错误",
                   icon: "none"
@@ -249,13 +281,41 @@ var _default = {
                 _this.username = "";
                 _this.password = "";
                 return _context.abrupt("return");
-              case 30:
+              case 45:
                 uni.setStorageSync("loginStatus", true);
-                console.log("log in successfully");
+                uni.setStorageSync("username", _this.username);
+                db = uniCloud.database();
+                _context.next = 50;
+                return uniCloud.callFunction({
+                  name: "searchField",
+                  data: {
+                    table: "uni-id-users",
+                    keyWord: _this.username,
+                    field: 'username'
+                  }
+                });
+              case 50:
+                _res = _context.sent;
+                doc = _res.result._id;
+                console.log(doc);
+                _context.next = 55;
+                return uniCloud.callFunction({
+                  name: "getScore",
+                  data: {
+                    "doc": doc
+                  }
+                });
+              case 55:
+                _res = _context.sent;
+                console.log("score is ", _res.result);
+                uni.setStorageSync("score", _res.result);
+                name = uni.getStorageSync("username");
+                console.log("log in successfully,username: ", name);
+                uni.hideLoading();
                 uni.switchTab({
                   url: "/pages/tabbar/profile/profile"
                 });
-              case 33:
+              case 62:
               case "end":
                 return _context.stop();
             }
@@ -271,7 +331,7 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["default"]))
 
 /***/ }),
 

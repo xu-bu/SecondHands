@@ -102,19 +102,19 @@ var components
 try {
   components = {
     uniForms: function () {
-      return Promise.all(/*! import() | uni_modules/uni-forms/components/uni-forms/uni-forms */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-forms/components/uni-forms/uni-forms")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-forms/components/uni-forms/uni-forms.vue */ 575))
+      return Promise.all(/*! import() | uni_modules/uni-forms/components/uni-forms/uni-forms */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-forms/components/uni-forms/uni-forms")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-forms/components/uni-forms/uni-forms.vue */ 589))
     },
     uniFormsItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-forms/components/uni-forms-item/uni-forms-item */ "uni_modules/uni-forms/components/uni-forms-item/uni-forms-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-forms/components/uni-forms-item/uni-forms-item.vue */ 584))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-forms/components/uni-forms-item/uni-forms-item */ "uni_modules/uni-forms/components/uni-forms-item/uni-forms-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-forms/components/uni-forms-item/uni-forms-item.vue */ 598))
     },
     uniEasyinput: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 490))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 504))
     },
     uniIdPagesEmailForm: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-id-pages/components/uni-id-pages-email-form/uni-id-pages-email-form */ "uni_modules/uni-id-pages/components/uni-id-pages-email-form/uni-id-pages-email-form").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-id-pages/components/uni-id-pages-email-form/uni-id-pages-email-form.vue */ 598))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-id-pages/components/uni-id-pages-email-form/uni-id-pages-email-form */ "uni_modules/uni-id-pages/components/uni-id-pages-email-form/uni-id-pages-email-form").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-id-pages/components/uni-id-pages-email-form/uni-id-pages-email-form.vue */ 612))
     },
     uniPopupCaptcha: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-captcha/components/uni-popup-captcha/uni-popup-captcha */ "uni_modules/uni-captcha/components/uni-popup-captcha/uni-popup-captcha").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-captcha/components/uni-popup-captcha/uni-popup-captcha.vue */ 546))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-captcha/components/uni-popup-captcha/uni-popup-captcha */ "uni_modules/uni-captcha/components/uni-popup-captcha/uni-popup-captcha").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-captcha/components/uni-popup-captcha/uni-popup-captcha.vue */ 560))
     },
   }
 } catch (e) {

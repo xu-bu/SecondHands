@@ -150,18 +150,18 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   data: function data() {
-    return {
-      title: 'Hello'
-    };
+    return {};
   },
   onLoad: function onLoad() {
     try {
       var value = uni.getStorageSync('loginStatus');
-      if (value) {
-        console.log(value);
-      } else {
+      if (!value) {
         console.log("not login now");
       }
     } catch (e) {
@@ -174,6 +174,9 @@ var _default = {
     }
   },
   methods: {
+    onPageHide: function onPageHide() {
+      console.log("hide");
+    },
     goods: function goods() {
       uni.switchTab({
         url: "/pages/tabbar/goods/goods"

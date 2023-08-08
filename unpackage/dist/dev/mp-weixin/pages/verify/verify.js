@@ -221,48 +221,109 @@ var _default = {
     // 发送验证码
     onSendCode: function onSendCode() {
       var _this2 = this;
-      if (this.disable) {
-        return;
-      }
-      if (!this.email) {
-        uni.showToast({
-          title: '请输入学校邮箱',
-          icon: 'none'
-        });
-        return;
-      }
-      if (!this.email.endsWith("@leeds.ac.uk")) {
-        uni.showToast({
-          title: '请确认邮箱以@leeds.ac.uk结尾',
-          icon: 'none'
-        });
-        return;
-      }
-      this.disable = true;
-      this.getCodeState();
-      uniCloud.callFunction({
-        name: "send-mail",
-        data: {
-          email: this.email,
-          type: "bind"
-        },
-        success: function success(res) {
-          _this2.code = res.result.captcha;
-          uni.showModal({
-            title: "提示",
-            content: "邮件发送成功，请检查你的垃圾邮箱",
-            showCancel: false
-          });
-        },
-        fail: function fail(err) {
-          console.error("err", err);
-          uni.showModal({
-            title: "提示",
-            content: "发送邮件失败，请刷新再试",
-            showCancel: false
-          });
-        }
-      });
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var res;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!_this2.disable) {
+                  _context.next = 2;
+                  break;
+                }
+                return _context.abrupt("return");
+              case 2:
+                if (_this2.email) {
+                  _context.next = 5;
+                  break;
+                }
+                uni.showToast({
+                  title: '请输入学校邮箱',
+                  icon: 'none'
+                });
+                return _context.abrupt("return");
+              case 5:
+                if (_this2.email.endsWith("@leeds.ac.uk")) {
+                  _context.next = 8;
+                  break;
+                }
+                uni.showToast({
+                  title: '请确认邮箱以@leeds.ac.uk结尾',
+                  icon: 'none'
+                });
+                return _context.abrupt("return");
+              case 8:
+                uni.showLoading({
+                  title: "正在检查邮箱"
+                });
+                _context.next = 11;
+                return uniCloud.callFunction({
+                  name: "searchField",
+                  data: {
+                    "table": "uni-id-users",
+                    "keyWord": _this2.email,
+                    "field": "email"
+                  }
+                });
+              case 11:
+                res = _context.sent;
+                console.log(_this2.email);
+                console.log(res);
+                if (!(res.result == "error")) {
+                  _context.next = 20;
+                  break;
+                }
+                uni.hideLoading();
+                uni.showToast({
+                  title: '注册出错，请稍后再试',
+                  icon: 'none'
+                });
+                return _context.abrupt("return");
+              case 20:
+                if (!(res.result > 0)) {
+                  _context.next = 24;
+                  break;
+                }
+                uni.hideLoading();
+                uni.showToast({
+                  title: '邮箱已被注册',
+                  icon: 'none'
+                });
+                return _context.abrupt("return");
+              case 24:
+                uni.hideLoading();
+                _this2.disable = true;
+                _this2.getCodeState();
+                uniCloud.callFunction({
+                  name: "send-mail",
+                  data: {
+                    email: _this2.email,
+                    type: "bind"
+                  },
+                  success: function success(res) {
+                    _this2.code = res.result.captcha;
+                    uni.showModal({
+                      title: "提示",
+                      content: "邮件发送成功，请检查你的垃圾邮箱",
+                      showCancel: false
+                    });
+                  },
+                  fail: function fail(err) {
+                    console.error("err", err);
+                    uni.showModal({
+                      title: "提示",
+                      content: "发送邮件失败，请刷新再试",
+                      showCancel: false
+                    });
+                  }
+                });
+              case 28:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
     },
     md5Hash: function md5Hash(text) {
       var hash = crypto.createHash('md5').update(text).digest('hex');
@@ -307,15 +368,15 @@ var _default = {
       }
       return true;
     },
-    isUsernameDuplicate: function isUsernameDuplicate() {
+    isUsed: function isUsed() {
       var _this3 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
         var res;
-        return _regenerator.default.wrap(function _callee$(_context) {
+        return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
-                _context.next = 2;
+                _context2.next = 2;
                 return uniCloud.callFunction({
                   name: "searchField",
                   data: {
@@ -325,52 +386,52 @@ var _default = {
                   }
                 });
               case 2:
-                res = _context.sent;
-                if (!(res == "error")) {
-                  _context.next = 7;
+                res = _context2.sent;
+                if (!(res.result == "error")) {
+                  _context2.next = 7;
                   break;
                 }
-                return _context.abrupt("return", -1);
+                return _context2.abrupt("return", -1);
               case 7:
-                if (!(res.affectedDocs == 0)) {
-                  _context.next = 11;
+                if (!(res.affectedDocs > 0)) {
+                  _context2.next = 9;
                   break;
                 }
-                return _context.abrupt("return", 1);
-              case 11:
-                return _context.abrupt("return", 0);
-              case 12:
+                return _context2.abrupt("return", 0);
+              case 9:
+                return _context2.abrupt("return", 1);
+              case 10:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee);
+        }, _callee2);
       }))();
     },
     onVerify: function onVerify() {
       var _this4 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var isUsernameDuplicate, res;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+        var isUsed, res;
+        return _regenerator.default.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
                 if (_this4.isInputValid()) {
-                  _context2.next = 2;
+                  _context3.next = 2;
                   break;
                 }
-                return _context2.abrupt("return");
+                return _context3.abrupt("return");
               case 2:
                 uni.showLoading({
                   title: '注册中'
                 });
-                _context2.next = 5;
-                return _this4.isUsernameDuplicate();
+                _context3.next = 5;
+                return _this4.isUsed();
               case 5:
-                isUsernameDuplicate = _context2.sent;
-                console.log(isUsernameDuplicate);
-                if (!(isUsernameDuplicate == -1)) {
-                  _context2.next = 13;
+                isUsed = _context3.sent;
+                console.log("isUsed status: ", isUsed);
+                if (!(isUsed == -1)) {
+                  _context3.next = 13;
                   break;
                 }
                 uni.hideLoading();
@@ -378,44 +439,38 @@ var _default = {
                   title: "注册出错，请重试",
                   icon: "none"
                 });
-                return _context2.abrupt("return");
+                return _context3.abrupt("return");
               case 13:
-                if (!(isUsernameDuplicate == 0)) {
-                  _context2.next = 19;
+                if (!(isUsed == 0)) {
+                  _context3.next = 19;
                   break;
                 }
                 uni.hideLoading();
                 uni.showToast({
-                  title: "用户名已被注册，请更换",
+                  title: "用户名或邮箱已被注册，请更换",
                   icon: "none"
                 });
-                return _context2.abrupt("return");
+                return _context3.abrupt("return");
               case 19:
-                _context2.next = 21;
+                _context3.next = 21;
                 return uniCloud.callFunction({
                   name: "databaseUpdate",
                   data: {
                     "table": "uni-id-users",
                     data: {
                       "username": _this4.username,
-                      "password": _this4.md5Hash(_this4.password)
+                      "password": _this4.md5Hash(_this4.password),
+                      "email": _this4.email
                     }
                   }
                 });
               case 21:
-                res = _context2.sent;
-                if (!res) {
-                  _context2.next = 28;
+                res = _context3.sent;
+                if (!res.success) {
+                  _context3.next = 27;
                   break;
                 }
                 uni.hideLoading();
-                uni.setStorage({
-                  key: 'loginStatus',
-                  data: true,
-                  success: function success() {
-                    console.log('set local storage successully');
-                  }
-                });
                 uni.showModal({
                   title: "提示",
                   content: "注册成功！",
@@ -428,20 +483,20 @@ var _default = {
                     }
                   }
                 });
-                _context2.next = 31;
+                _context3.next = 30;
                 break;
-              case 28:
+              case 27:
                 uni.hideLoading();
                 uni.showToast({
                   title: "注册失败，请稍后再试"
                 });
-                return _context2.abrupt("return");
-              case 31:
+                return _context3.abrupt("return");
+              case 30:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
           }
-        }, _callee2);
+        }, _callee3);
       }))();
     }
   }
