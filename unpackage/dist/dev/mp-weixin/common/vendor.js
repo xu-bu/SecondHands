@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8934,7 +8934,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8955,14 +8955,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9058,7 +9058,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9963,23 +9963,7 @@ var b = "development" === "development",
   C = "true" === undefined || !0 === undefined,
   T = S([]),
   P = "h5" === k ? "web" : "app-plus" === k ? "app" : k,
-  A = S({
-    "address": [
-        "127.0.0.1",
-        "172.16.3.158",
-        "169.254.105.150",
-        "192.168.1.1",
-        "192.168.137.1"
-    ],
-    "debugPort": 9000,
-    "initialLaunchType": "remote",
-    "servePort": 7000,
-    "skipFiles": [
-        "<node_internals>/**",
-        "C:/HBuilderX/plugins/unicloud/**/*.js"
-    ]
-}
-),
+  A = S(undefined),
   E = S([{"provider":"aliyun","spaceName":"ali-cloud","spaceId":"mp-168046f4-78e7-43bb-a0ef-ad66252cccfd","clientSecret":"b6LXRvckaKcIFc3wx1AIxA==","endpoint":"https://api.next.bspapp.com"}]) || [],
   O = true;
 var x = "";
@@ -17549,7 +17533,8 @@ var _default = {
       "van-card": "/wxcomponents/vant/card/index",
       "van-grid": "/wxcomponents/vant/grid/index",
       "van-grid-item": "/wxcomponents/vant/grid-item/index",
-      "van-popup": "/wxcomponents/vant/popup/index"
+      "van-popup": "/wxcomponents/vant/popup/index",
+      "van-nav-bar": "/wxcomponents/vant/nav-bar/index"
     }
   },
   "tabBar": {
@@ -17564,19 +17549,19 @@ var _default = {
       "text": "主页"
     }, {
       "pagePath": "pages/tabbar/goods/goods",
-      "iconPath": "static/img/tabbar/home.png",
-      "selectedIconPath": "static/img/tabbar/homeactive.png",
-      "text": "商品"
+      "iconPath": "static/img/tabbar/shop.png",
+      "selectedIconPath": "static/img/tabbar/shopactive.png",
+      "text": "二手"
     }, {
       "pagePath": "pages/tabbar/publish/publish",
       "iconPath": "static/img/tabbar/add.png",
       "selectedIconPath": "static/img/tabbar/addactive.png",
       "text": "发布"
     }, {
-      "pagePath": "pages/tabbar/testPage/testPage",
+      "pagePath": "pages/tabbar/NFT/NFT",
       "iconPath": "static/img/tabbar/guanzhu.png",
       "selectedIconPath": "static/img/tabbar/guanzhuactive.png",
-      "text": "测试"
+      "text": "NFT"
     }, {
       "pagePath": "pages/tabbar/profile/profile",
       "iconPath": "static/img/tabbar/me.png",
@@ -20355,7 +20340,7 @@ function createDecoratorForEnhancer(e) {
   var t = createPropDecorator(!0, function (t, r, n, o, a) {
       defineObservableProperty(t, r, n ? n.initializer ? n.initializer.call(t) : n.value : void 0, e);
     }),
-    r = ("undefined" != typeof process && Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}), t);
+    r = ("undefined" != typeof process && Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"ch1nl33ds","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}), t);
   return r.enhancer = e, r;
 }
 var defaultCreateObservableOptions = {

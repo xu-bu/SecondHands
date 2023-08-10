@@ -18,7 +18,7 @@
 			}
 		},
 		methods: {
-			uploadFeedback(){
+			async uploadFeedback(){
 				const db=uniCloud.database()
 				try{
 					console.log(this.content)

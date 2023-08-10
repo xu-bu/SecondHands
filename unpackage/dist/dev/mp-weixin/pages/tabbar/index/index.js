@@ -174,8 +174,10 @@ var _default = {
     }
   },
   methods: {
-    onPageHide: function onPageHide() {
-      console.log("hide");
+    NFT: function NFT() {
+      uni.switchTab({
+        url: "/pages/tabbar/NFT/NFT"
+      });
     },
     goods: function goods() {
       uni.switchTab({

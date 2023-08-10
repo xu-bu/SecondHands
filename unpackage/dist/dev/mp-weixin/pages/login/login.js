@@ -165,8 +165,6 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
-//
-//
 
 var crypto = __webpack_require__(/*! crypto */ 269);
 var _default = {
@@ -184,7 +182,7 @@ var _default = {
     login: function login() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var res, email, password, db, _res, doc, name;
+        var res, email, password, score, username, db, _res;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -240,12 +238,13 @@ var _default = {
                   }
                 });
               case 23:
-                res = _context.sent;
-                console.log(res);
-                email = res.result.data[0].email;
-                console.log(email);
-                password = res.result.data[0].password;
-                _context.next = 30;
+                _res = _context.sent;
+                console.log(_res);
+                email = _res.result.data[0].email;
+                password = _res.result.data[0].password;
+                score = _res.result.data[0].score;
+                username = _res.result.data[0].username;
+                _context.next = 31;
                 return uniCloud.callFunction({
                   name: "searchField",
                   data: {
@@ -254,10 +253,10 @@ var _default = {
                     "field": "email"
                   }
                 });
-              case 30:
-                res = _context.sent;
-                if (!(res.result != 0)) {
-                  _context.next = 37;
+              case 31:
+                _res = _context.sent;
+                if (!(_res.result != 0)) {
+                  _context.next = 38;
                   break;
                 }
                 uni.hideLoading();
@@ -268,9 +267,9 @@ var _default = {
                 _this.username = "";
                 _this.password = "";
                 return _context.abrupt("return");
-              case 37:
+              case 38:
                 if (!(password != _this.md5Hash(_this.password))) {
-                  _context.next = 45;
+                  _context.next = 44;
                   break;
                 }
                 uni.hideLoading();
@@ -281,11 +280,11 @@ var _default = {
                 _this.username = "";
                 _this.password = "";
                 return _context.abrupt("return");
-              case 45:
+              case 44:
                 uni.setStorageSync("loginStatus", true);
                 uni.setStorageSync("username", _this.username);
                 db = uniCloud.database();
-                _context.next = 50;
+                _context.next = 49;
                 return uniCloud.callFunction({
                   name: "searchField",
                   data: {
@@ -294,28 +293,18 @@ var _default = {
                     field: 'username'
                   }
                 });
-              case 50:
+              case 49:
                 _res = _context.sent;
-                doc = _res.result._id;
-                console.log(doc);
-                _context.next = 55;
-                return uniCloud.callFunction({
-                  name: "getScore",
-                  data: {
-                    "doc": doc
-                  }
-                });
-              case 55:
-                _res = _context.sent;
-                console.log("score is ", _res.result);
-                uni.setStorageSync("score", _res.result);
-                name = uni.getStorageSync("username");
-                console.log("log in successfully,username: ", name);
+                // 如果登录成功
+                console.log("score is ", score);
+                uni.setStorageSync("score", score);
+                uni.setStorageSync("username", username);
+                console.log("log in successfully,username: ", username);
                 uni.hideLoading();
                 uni.switchTab({
                   url: "/pages/tabbar/profile/profile"
                 });
-              case 62:
+              case 56:
               case "end":
                 return _context.stop();
             }

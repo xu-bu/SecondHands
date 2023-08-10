@@ -161,11 +161,6 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
     return {
@@ -173,25 +168,17 @@ var _default = {
     };
   },
   methods: {
-    onload: function onload() {},
-    showPopup: function showPopup() {
-      var _this = this;
-      uni.showModal({
-        title: '输入框',
-        // content: '请输入内容：',
-        editable: true,
-        placeholderText: '请输入...',
-        showCancel: true,
-        cancelText: '取消',
-        confirmText: '确定',
-        success: function success(res) {
-          if (res.confirm) {
-            console.log(res.content);
-          } else if (res.cancel) {
-            console.log('用户点击了取消');
-          }
-        }
-      });
+    getLoginStatus: function getLoginStatus() {
+      var loginStatus = uni.getStorageSync("loginStatus");
+      if (!loginStatus) {
+        uni.showToast({
+          title: "未登录"
+        });
+      } else {
+        uni.showToast({
+          title: "已经登录"
+        });
+      }
     },
     onClose: function onClose() {
       this.show = false;

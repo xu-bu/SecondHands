@@ -44,7 +44,7 @@ exports.main = async (event, context) => {
 		// 发送邮件
 		res.sendMailRes = await emailService.sendMail({
 			"from": emailConfig.auth.user, // 邮件的发送者
-			"to": "sc22x2w@leeds.ac.uk", // 邮件的接收者
+			"to": email, // 邮件的接收者
 			"cc": emailConfig.auth.user, // 由于邮件可能会被当成垃圾邮件，但只要把右键抄送给自己一份，就不会被当成垃圾邮件。
 			"subject": subject, // 邮件的标题
 			"text": text, // 邮件的内容

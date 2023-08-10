@@ -16,8 +16,8 @@ Since WeChat may limit API for serverless function, we may need to configure API
 ## 页面展示/Page presentation：
 商品页面/Goods tab：
 
-![goods](https://github.com/xu-bu/vue2/blob/main/readmeIMG/goods.png)
+![goods](./readmeIMG/goods.png)
 
 发布页面/Publish tab:
 
-![publish](https://github.com/xu-bu/vue2/blob/main/readmeIMG/publish.png)
+![publish](./readmeIMG/publish.png)

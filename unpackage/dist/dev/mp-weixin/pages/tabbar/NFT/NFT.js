@@ -158,16 +158,23 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      cards: []
+      cards: [],
+      // 消耗积分兑换NFT
+      fee: 15,
+      score: 0
     };
   },
   methods: {
     onLoad: function onLoad() {
       var _this2 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var loginStatus;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -175,8 +182,14 @@ var _default = {
                 _context.next = 2;
                 return _this2.renderNFT();
               case 2:
+                loginStatus = uni.getStorageSync("loginStatus");
+                if (!loginStatus) {
+                  _this2.score = 0;
+                } else {
+                  _this2.score = uni.getStorageSync("score");
+                }
                 console.log(_this2.cards);
-              case 3:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -207,11 +220,22 @@ var _default = {
     claim: function claim(index) {
       var _this3 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var tokenID, name, _this;
+        var score, tokenID, name, _this, privateKey;
         return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                score = uni.getStorageSync("score");
+                if (!(!score || score < _this3.fee)) {
+                  _context2.next = 4;
+                  break;
+                }
+                uni.showToast({
+                  title: "积分不足",
+                  icon: "error"
+                });
+                return _context2.abrupt("return");
+              case 4:
                 tokenID = _this3.cards[index].tokenID;
                 console.log(tokenID);
                 name = _this3.cards[index].title;
@@ -219,18 +243,20 @@ var _default = {
                 uni.showLoading({
                   title: "领取中..."
                 });
-                _context2.next = 7;
+                privateKey = uni.getStorageSync("privateKey");
+                _context2.next = 12;
                 return uni.request({
                   method: "POST",
                   url: "http://localhost:8080/claim",
                   data: {
-                    "privateKey": "8a618ed7f0fbcafcb8c745469507c8522994ce369dbf5b57f87bab5237902344",
+                    "privateKey": privateKey,
                     "tokenID": tokenID
                   },
                   header: {
                     'content-type': 'application/x-www-form-urlencoded'
                   },
-                  success: function success() {
+                  success: function success(res) {
+                    console.log(res);
                     uni.hideLoading();
                     var __this = _this;
                     uni.showModal({
@@ -239,18 +265,19 @@ var _default = {
                       success: function success(res) {
                         __this.cards[index].buttonDisabled = true;
                         __this.cards[index].buttonText = "已拥有";
+                        uni.setStorageSync("score", score - this.fee);
                       }
                     });
                   },
                   fail: function fail(err) {
                     uni.hideLoading();
                     uni.showModal({
-                      content: "领取失败",
+                      content: "您已领取过该NFT，请等待交易完成",
                       showCancel: false
                     });
                   }
                 });
-              case 7:
+              case 12:
               case "end":
                 return _context2.stop();
             }

@@ -1,5 +1,8 @@
 <template>
 	<div class="container">
+		<van-cell-group>
+			<van-cell title="NFT积分" :value="score"/>
+		</van-cell-group>
 		<!-- 使用 v-for 循环渲染 <van-card> 元素 -->
 		<van-card v-for="(card, index) in cards" :key="index" :tag="NFT" :desc="card.desc" :title="card.title"
 			:thumb="card.thumb" :lazy-load="true">
@@ -16,15 +19,22 @@
 		data() {
 			return {
 				cards: [],
+				// 消耗积分兑换NFT
+				fee:15,
+				score:0
 			}
 		},
-
 		methods: {
 			async onLoad() {
 				await this.renderNFT()
+				const loginStatus=uni.getStorageSync("loginStatus")
+				if (!loginStatus){
+					this.score=0
+				}else{
+					this.score=uni.getStorageSync("score")
+				}
 				console.log(this.cards)
 			},
-
 			pushElement(element) {
 				console.log(element)
 				let hexString = element.id.tokenId; // 16进制数表示为字符串
@@ -46,6 +56,15 @@
 				}
 			},
 			async claim(index) {
+				const score= uni.getStorageSync("score")
+				if (!score || score<this.fee){
+					uni.showToast({
+						title:"积分不足",
+						icon:"error"
+					})
+					return
+				}
+				
 				let tokenID=this.cards[index].tokenID
 				console.log(tokenID)
 				let name=this.cards[index].title
@@ -54,17 +73,19 @@
 				uni.showLoading({
 					title:"领取中..."
 				})
+				let privateKey=uni.getStorageSync("privateKey")
 				await uni.request({
 					method:"POST",
 					url:"http://localhost:8080/claim",
 					data:{
-						"privateKey":"8a618ed7f0fbcafcb8c745469507c8522994ce369dbf5b57f87bab5237902344",
+						"privateKey":privateKey,
 						"tokenID":tokenID
 					},
 					header:{
 						'content-type' : 'application/x-www-form-urlencoded'
 					},
-					success() {
+					success(res) {
+						console.log(res)
 						uni.hideLoading()
 						const __this=_this
 						uni.showModal({
@@ -73,13 +94,15 @@
 							success: function(res) {
 								__this.cards[index].buttonDisabled=true
 								__this.cards[index].buttonText="已拥有"
+								uni.setStorageSync("score",score-this.fee)
+								
 							},
 						})
 					},
 					fail(err) {
 						uni.hideLoading()
 						uni.showModal({
-							content: "领取失败",
+							content: "您已领取过该NFT，请等待交易完成",
 							showCancel: false,
 						})
 					}

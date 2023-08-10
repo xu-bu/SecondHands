@@ -227,16 +227,22 @@ var _default = {
   },
   methods: {
     onShow: function onShow() {
-      var pages = getCurrentPages();
-      var perpage = pages[pages.length - 1];
-      perpage.onLoad();
-      try {
-        var value = uni.getStorageSync('loginStatus');
-        if (!value) {
-          this.redirectToVerify();
-        }
-      } catch (e) {
-        this.redirectToVerify();
+      // const pages = getCurrentPages()
+      // const perpage = pages[pages.length - 1]
+      // perpage.onLoad()
+      // try {
+      // 	const value = uni.getStorageSync('loginStatus');
+      // 	if (!value) {
+      // 		this.redirectToVerify()
+      // 	} 
+      // } catch (e) {
+      // 	this.redirectToVerify()
+      // }
+      if (!uni.getStorageSync('loginStatus')) {
+        // this.redirectToVerify()
+        uni.redirectTo({
+          url: "/pages/login/login"
+        });
       }
     },
     redirectToVerify: function redirectToVerify() {
