@@ -162,10 +162,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 //
 //
 //
@@ -186,17 +189,31 @@ var _default = {
   },
   methods: {
     uploadFeedback: function uploadFeedback() {
-      var db = uniCloud.database();
-      try {
-        console.log(this.content);
-        db.collection('feedback').add({
-          "content": this.content
-        });
-      } catch (e) {
-        console.log(e);
-        this.backToIndex('网络似乎不太好，提交失败了>_<');
-      }
-      this.backToIndex("反馈提交成功！");
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var db;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                db = uniCloud.database();
+                try {
+                  console.log(_this.content);
+                  db.collection('feedback').add({
+                    "content": _this.content
+                  });
+                } catch (e) {
+                  console.log(e);
+                  _this.backToIndex('网络似乎不太好，提交失败了>_<');
+                }
+                _this.backToIndex("反馈提交成功！");
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
     },
     backToIndex: function backToIndex(string) {
       uni.showModal({

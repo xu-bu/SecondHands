@@ -1,9 +1,9 @@
 <template>
 	<div class="container">
 		<van-grid clickable column-num="2">
-			<van-grid-item icon="home-o" link-type="navigateTo" url="/pages/tabbar/goods/goods" text="二手" />
-			<van-grid-item icon="search" link-type="reLaunch" url="/pages/tabbar/NFT/NFT" text="NFT" />
-			<van-grid-item icon="home-o" link-type="navigateTo" url="/pages/dashboard/index" text="寄存" />
+			<van-grid-item icon="home-o" link-type="switchTab" url="/pages/tabbar/goods/goods" text="二手" />
+			<van-grid-item icon="search" link-type="switchTab" url="/pages/tabbar/NFT/NFT"  text="NFT" />
+			<van-grid-item icon="home-o" link-type="navigateTo" url="/pages/tabbar/testPage/testPage" text="寄存" />
 			<van-grid-item icon="search" link-type="reLaunch" url="/pages/dashboard/index" text="转租" />
 		</van-grid>
 
@@ -32,8 +32,10 @@
 			}
 		},
 		methods: {
-			onPageHide(){
-				console.log("hide")
+			NFT(){
+				uni.switchTab({
+					url: "/pages/tabbar/NFT/NFT"
+				})
 			},
 			goods() {
 				uni.switchTab({

@@ -23,7 +23,7 @@
 			
 		},
 		methods: {
-			async onShow() {
+			onShow() {
 				if (!uni.getStorageSync('loginStatus')) {
 					uni.redirectTo({
 						url: "/pages/login/login"
@@ -48,9 +48,14 @@
 			},
 			logout(){
 				try {
+					uni.clearStorageSync()
 					uni.setStorageSync('loginStatus', false);
 				} catch (e) {
 					console.log(e)
+					uni.showModal({
+						content:"出现错误"
+					})
+					return
 				}
 				uni.switchTab({
 					url:"/pages/tabbar/index/index"
@@ -70,6 +75,7 @@
 							console.log('输入的内容：', res.content);
 							_this.privateKey = res.content
 							uni.setStorageSync("privateKey", res.content)
+							_this.freshMaskedPrivateKey()
 						} else if (res.cancel) {
 							console.log('用户点击了取消');
 						}

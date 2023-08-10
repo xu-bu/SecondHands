@@ -178,32 +178,19 @@ var _default = {
   },
   methods: {
     onShow: function onShow() {
-      var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                if (!uni.getStorageSync('loginStatus')) {
-                  uni.redirectTo({
-                    url: "/pages/login/login"
-                  });
-                } else {
-                  try {
-                    _this2.username = uni.getStorageSync("username");
-                    _this2.score = uni.getStorageSync("score");
-                    _this2.freshMaskedPrivateKey();
-                  } catch (e) {
-                    console.log(e);
-                  }
-                }
-              case 1:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
+      if (!uni.getStorageSync('loginStatus')) {
+        uni.redirectTo({
+          url: "/pages/login/login"
+        });
+      } else {
+        try {
+          this.username = uni.getStorageSync("username");
+          this.score = uni.getStorageSync("score");
+          this.freshMaskedPrivateKey();
+        } catch (e) {
+          console.log(e);
+        }
+      }
     },
     freshMaskedPrivateKey: function freshMaskedPrivateKey() {
       var value = uni.getStorageSync('privateKey');
@@ -215,23 +202,28 @@ var _default = {
     },
     logout: function logout() {
       try {
+        uni.clearStorageSync();
         uni.setStorageSync('loginStatus', false);
       } catch (e) {
         console.log(e);
+        uni.showModal({
+          content: "出现错误"
+        });
+        return;
       }
       uni.switchTab({
         url: "/pages/tabbar/index/index"
       });
     },
     privateKeyPop: function privateKeyPop() {
-      var _this3 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
         var _this;
-        return _regenerator.default.wrap(function _callee3$(_context3) {
+        return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context3.prev = _context3.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
-                _this = _this3;
+                _this = _this2;
                 uni.showModal({
                   title: '绑定私钥',
                   editable: true,
@@ -244,6 +236,7 @@ var _default = {
                       console.log('输入的内容：', res.content);
                       _this.privateKey = res.content;
                       uni.setStorageSync("privateKey", res.content);
+                      _this.freshMaskedPrivateKey();
                     } else if (res.cancel) {
                       console.log('用户点击了取消');
                     }
@@ -251,10 +244,10 @@ var _default = {
                 });
               case 2:
               case "end":
-                return _context3.stop();
+                return _context2.stop();
             }
           }
-        }, _callee3);
+        }, _callee2);
       }))();
     }
   }

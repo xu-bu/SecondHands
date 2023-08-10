@@ -1,8 +1,5 @@
 <template>
 	<view class="login-container">
-		<!-- Background Image -->
-		<!-- <image class="background-image" src="/static/img/background.png"></image> -->
-
 		<!-- Logo -->
 		<image class="logo" src="/static/img/background.png"></image>
 		<!-- Login Form -->
@@ -18,6 +15,7 @@
 			<van-button type="default" class="register-button" @click="register">注册</van-button>
 		</view>
 	</view>
+
 </template>
 
 <script>
@@ -36,7 +34,7 @@
 			},
 			async login() {
 				uni.showLoading({
-					title:"登录中"
+					title: "登录中"
 				})
 				let res = await uniCloud.callFunction({
 					name: "searchField",
@@ -76,8 +74,9 @@
 					})
 					console.log(res)
 					let email = res.result.data[0].email
-					console.log(email)
 					let password = res.result.data[0].password
+					let score=res.result.data[0].score
+					let username=res.result.data[0].username
 					res = await uniCloud.callFunction({
 						name: "searchField",
 						data: {
@@ -105,33 +104,27 @@
 						this.username = ""
 						this.password = ""
 						return
-					} else {
-						uni.setStorageSync("loginStatus", true)
-						uni.setStorageSync("username", this.username)
-						const db=uniCloud.database()
-						let res=await uniCloud.callFunction({
-							name:"searchField",
-							data:{
-								table:"uni-id-users",
-								keyWord: this.username,
-								field: 'username'
-							}
-						})
-						const doc=res.result._id
-						console.log(doc)
-						res=await uniCloud.callFunction({
-							name:"getScore",
-							data:{"doc":doc}
-						})
-						console.log("score is ",res.result)
-						uni.setStorageSync("score", res.result)
-						let name = uni.getStorageSync("username")
-						console.log("log in successfully,username: ", name)
-						uni.hideLoading()
-						uni.switchTab({
-							url: "/pages/tabbar/profile/profile"
-						})
 					}
+					uni.setStorageSync("loginStatus", true)
+					uni.setStorageSync("username", this.username)
+					const db = uniCloud.database()
+					let res = await uniCloud.callFunction({
+						name: "searchField",
+						data: {
+							table: "uni-id-users",
+							keyWord: this.username,
+							field: 'username'
+						}
+					})
+					// 如果登录成功
+					console.log("score is ", score)
+					uni.setStorageSync("score", score)
+					uni.setStorageSync("username", username)
+					console.log("log in successfully,username: ", username)
+					uni.hideLoading()
+					uni.switchTab({
+						url: "/pages/tabbar/profile/profile"
+					})
 				}
 			},
 			register() {

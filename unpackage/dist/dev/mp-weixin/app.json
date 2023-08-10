@@ -54,9 +54,9 @@
       },
       {
         "pagePath": "pages/tabbar/goods/goods",
-        "iconPath": "static/img/tabbar/home.png",
-        "selectedIconPath": "static/img/tabbar/homeactive.png",
-        "text": "商品"
+        "iconPath": "static/img/tabbar/shop.png",
+        "selectedIconPath": "static/img/tabbar/shopactive.png",
+        "text": "二手"
       },
       {
         "pagePath": "pages/tabbar/publish/publish",
@@ -65,10 +65,10 @@
         "text": "发布"
       },
       {
-        "pagePath": "pages/tabbar/testPage/testPage",
+        "pagePath": "pages/tabbar/NFT/NFT",
         "iconPath": "static/img/tabbar/guanzhu.png",
         "selectedIconPath": "static/img/tabbar/guanzhuactive.png",
-        "text": "测试"
+        "text": "NFT"
       },
       {
         "pagePath": "pages/tabbar/profile/profile",
@@ -88,6 +88,7 @@
     "van-card": "/wxcomponents/vant/card/index",
     "van-grid": "/wxcomponents/vant/grid/index",
     "van-grid-item": "/wxcomponents/vant/grid-item/index",
-    "van-popup": "/wxcomponents/vant/popup/index"
+    "van-popup": "/wxcomponents/vant/popup/index",
+    "van-nav-bar": "/wxcomponents/vant/nav-bar/index"
   }
 }
